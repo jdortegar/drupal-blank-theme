@@ -1,0 +1,30 @@
+/* CSS Document */
+/*!
+Theme Name: GF THeme
+Description: Blank Drupal Theme
+Version: 1.0
+Author: David Ortega
+Author URI: http://www.beirutdc.com.ar/
+Tags: starter theme, light, sass, gulp, livereload
+
+        The CSS, XHTML is released under GPL:
+        http://www.opensource.org/licenses/gpl-license.php
+
+*/
+
+/* Vendor */
+@import 'susy';
+@import 'su';
+
+/* Setup */
+@import 'reset';
+@import 'mixins';
+@import 'variables';
+@import 'fonts';
+@import 'globals';
+
+/* WP parts */
+@import 'header';
+@import 'homepage';
+@import 'sidebar';
+@import 'footer';
