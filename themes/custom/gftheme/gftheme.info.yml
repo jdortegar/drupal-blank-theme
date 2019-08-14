@@ -6,3 +6,10 @@ libraries:
   - gftheme/global-css
   - gftheme/global-js
 # stylesheets-remove:
+
+regions:
+  content: 'Main Content'
+  header: 'Header'
+  footer: 'Footer'
+  sidebar: 'Sidebar'
+  main_navigation: 'Main Navigation'

@@ -7,10 +7,16 @@ html {
 
 body {
   -webkit-font-smoothing: antialiased;
+  background: #fff;
+  font-family: 'Roboto', sans-serif;
 }
 
 * {
   box-sizing: border-box;
+}
+
+.container {
+  @include container(1100px);
 }
 
 /* =======================================================================
