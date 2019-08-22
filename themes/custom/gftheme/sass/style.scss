@@ -12,18 +12,15 @@ Tags: starter theme, light, sass, gulp, livereload
 
 */
 
-/* Vendor */
-@import 'susy';
-@import 'su';
-
 /* Setup */
-@import 'reset';
-@import 'mixins';
-@import 'variables';
-@import 'fonts';
+// @import 'reset';
+// @import 'mixins';
+// @import 'variables';
+// @import 'fonts';
 @import 'globals';
 
 /* WP parts */
+@import 'servicios';
 @import 'header';
 @import 'homepage';
 @import 'sidebar';

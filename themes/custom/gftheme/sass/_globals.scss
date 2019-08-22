@@ -9,14 +9,18 @@ body {
   -webkit-font-smoothing: antialiased;
   background: #fff;
   font-family: 'Roboto', sans-serif;
+  color: #223362 !important;
 }
 
 * {
   box-sizing: border-box;
 }
 
-.container {
-  @include container(1100px);
+.wrapper {
+  padding: 0px 10px;
+  @media (min-width: 1200px) {
+    padding: 0 100px;
+  }
 }
 
 /* =======================================================================
@@ -27,6 +31,7 @@ body {
 * html .clearfix {
   height: 1%;
   overflow: visible;
+  scroll-behavior: smooth;
 }
 
 /* float clearing for IE7 */
@@ -46,4 +51,51 @@ body {
 
 .clr {
   clear: both;
+}
+
+.white-color {
+  color: #fff;
+}
+
+p {
+  line-height: initial;
+}
+
+main,
+.dialog-off-canvas-main-canvas {
+  scroll-behavior: smooth;
+}
+
+.section-wrapper {
+  padding: 100px 0;
+}
+
+.margin-top-20 {
+  margin-top: 20px;
+}
+
+.gf-yellow-text {
+  color: #f2c453;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.carousel-indicators li {
+  box-sizing: content-box;
+  flex: 0 1 auto;
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #223362 !important;
+  background-clip: padding-box;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  opacity: 0.5;
+  transition: opacity 0.6s ease;
 }

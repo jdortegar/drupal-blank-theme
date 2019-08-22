@@ -1,0 +1,136 @@
+.servicios-section {
+  min-height: 90vh;
+  color: #fff;
+  text-align: center;
+  padding: 200px 0;
+  margin-top: -100px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+  .header {
+    margin: 0 50px;
+    border-bottom: 1px solid #fff;
+    h4 {
+      font-weight: 700;
+    }
+  }
+  .content {
+    margin-top: 50px;
+    padding: 0 10%;
+  }
+}
+
+.section-servicios-1 {
+  background: url(../images/img-servicios-1.png) no-repeat center bottom;
+  background-size: cover;
+  .content {
+    margin-top: 50px;
+    padding: 0 10%;
+  }
+  .circle {
+    width: 175px;
+    background: #f2c453;
+    border-radius: 50%;
+    height: 175px;
+    vertical-align: middle;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+}
+
+.section-servicios-2 {
+  background: url(../images/img-servicios-2.png) no-repeat center center;
+  background-size: cover;
+  .content {
+    div {
+      text-align: left;
+      width: 50%;
+      h6 {
+        padding-left: 15px;
+        font-size: 15px;
+        font-weight: 700;
+      }
+      ul {
+        padding-left: 30px;
+        border-left: 3px solid #fff;
+        padding-bottom: 10px;
+        margin: 0;
+        li {
+          line-height: 1;
+          font-size: 15px;
+        }
+      }
+    }
+
+    .left {
+      padding: 30px 20px;
+      background: #f2c453;
+    }
+    .right {
+      padding: 10px 20px 20px;
+      background: #b7b7b7;
+    }
+  }
+}
+
+.section-servicios-3 {
+  background: url(../images/img-servicios-3.png) no-repeat center center;
+  background-size: cover;
+  .content {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    .number {
+      font-size: 90px;
+      font-weight: 700;
+      color: #f2c453;
+    }
+    .text {
+      margin-left: 10px;
+      text-align: left;
+      font-size: 13px;
+      flex-grow: 2;
+    }
+  }
+}
+
+.section-servicios-4 {
+  background: url(../images/img-servicios-4.png) no-repeat center center;
+  background-size: cover;
+  .content {
+    margin-top: 50px;
+    padding: 0 10%;
+  }
+  .circle {
+    width: 175px;
+    line-height: 1.2;
+    background: transparent;
+    border: 6px solid #f2c453;
+    border-radius: 50%;
+    height: 175px;
+    vertical-align: middle;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+}
+
+.section-servicios-5 {
+  background: url(../images/img-servicios-5.png) no-repeat center center;
+  background-size: cover;
+  .content {
+    margin-top: 50px;
+    padding: 0 10%;
+  }
+  .text {
+    margin-top: 42px;
+    font-weight: 700;
+  }
+}
