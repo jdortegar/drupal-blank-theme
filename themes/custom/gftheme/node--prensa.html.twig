@@ -1,17 +1,25 @@
-<div class="prensa-element-container">
-  <div class="prensa-title align-items-end">
-    {{content.field_logo_diario}}
-    <!-- <img src="./themes/custom/gftheme/images/icon-yellow-agro.png" alt="Agronegocios" class="img-fluid" /> -->
-    <div class="prensa-content">
-      <h6 class="font-bold">{{content.field_title}}</h6>
-      <p>{{content.field_extracto}}</p>
-      <div class="date">{{content.field_fecha_de_publicacion}}</div>
-    </div>
+
+<article{{ attributes }}>
+  {{ title_prefix }}
+  {% if not page %}
+    <h2{{ title_attributes }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% if display_submitted %}
+    <footer>
+      {{ author_picture }}
+      <div{{ author_attributes }}>
+        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+        {{ metadata }}
+      </div>
+    </footer>
+  {% endif %}
+
+  <div{{ content_attributes }}>
+    {{ content }}
   </div>
-  <div class="blue-container align-items-center">
-    <a href="{{content.field_enlace}}" target="_blank">
-      Ir a link
-      <img src="./themes/custom/gftheme/images/icon-arrow.png" alt="Agronegocios" class="img-fluid icon-right" />
-    </a>
-  </div>
-</div>
+
+</article>

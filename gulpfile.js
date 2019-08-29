@@ -12,16 +12,18 @@ gulp.task('style', () => {
 });
 
 gulp.task('script', () => {
-  return gulp
-    .src([
-      './node_modules/bootstrap/dist/js/bootstrap.min.js',
-      './node_modules/jquery/dist/jquery.min.js',
-      './node_modules/popper.js/dist/umd/popper.min.js',
-      './themes/custom/gftheme/lib/*.js'
-    ])
-    .pipe(uglify())
-    .pipe(gulp.dest('./themes/custom/gftheme/js'))
-    .pipe(browserSync.stream());
+  return (
+    gulp
+      .src([
+        './node_modules/bootstrap/dist/js/bootstrap.min.js',
+        './node_modules/jquery/dist/jquery.min.js',
+        './node_modules/popper.js/dist/umd/popper.min.js',
+        './themes/custom/gftheme/lib/*.js'
+      ])
+      // .pipe(uglify())
+      .pipe(gulp.dest('./themes/custom/gftheme/js'))
+      .pipe(browserSync.stream())
+  );
 });
 
 gulp.task('fontAwesome', () => {

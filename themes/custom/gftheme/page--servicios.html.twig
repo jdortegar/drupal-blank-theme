@@ -1,36 +1,36 @@
-{% include directory ~ '/partials/header.html.twig' %}
+{% include directory ~ '/partials/header.html.twig' with {'menuColor': 'servicios-blue'}%}
 
 <div class="container-fluid">
   <div class="wrapper">
 
     <main role="main">
 
-      <section class="section-wrapper section-servicios-1 servicios-section">
+      <section class="section-wrapper section-servicios-1 servicios-section " id="energia">
         <div class="header">
           <img src="./themes/custom/gftheme/images/icon-energia.png" alt="Energia" class="img-fluid" />
           <h4>Energía</h4>
         </div>
         <div class="content row align-items-center justify-content-center">
-          <div class="col justify-content-center">
+          <div class="circle-container justify-content-center">
             <div class="circle">Analizamos<br>TENDENCIAS <br>DEL SECTOR <br>ENERGÉTICO</div>
           </div>
-          <div class="col">
+          <div class="circle-container">
             <div class="circle">Focalizados en<br>
               ENERGÍAS<br>
               RENOVABLES</div>
           </div>
-          <div class="col">
+          <div class="circle-container">
             <div class="circle">Buscamos<br>
               ENERGÍAS<br>
               RENOVABLES</div>
           </div>
-          <div class="col">
+          <div class="circle-container">
             <div class="circle">A partir de<br>
               FUENTES<br>
               SEGURAS Y<br>
               CONFIABLES</div>
           </div>
-          <div class="col">
+          <div class="circle-container">
             <div class="circle">Proponemos<br>
               PROYECTOS DE<br>
               INVERSIÓN Y<br>
@@ -40,7 +40,7 @@
         </div>
       </section>
       <!-- Section -->
-      <section class="section-wrapper section-servicios-2 servicios-section">
+      <section class="section-wrapper section-servicios-2 servicios-section scroll-animation" id="agro">
         <div class="header">
           <img src="./themes/custom/gftheme/images/icon-agro.png" alt="Energia" class="img-fluid" />
           <h4>AGRONEGOCIOS</h4>
@@ -68,7 +68,7 @@
       </section>
       <!-- Section -->
       <!-- Section -->
-      <section class="section-wrapper section-servicios-3 servicios-section">
+      <section class="section-wrapper section-servicios-3 servicios-section scroll-animation" id="medio">
         <div class="header">
           <img src="./themes/custom/gftheme/images/icon-medio.png" alt="Energia" class="img-fluid" />
           <h4>MEDIO AMBIENTE</h4>
@@ -103,7 +103,7 @@
       </section>
       <!-- Section -->
       <!-- Section -->
-      <section class="section-wrapper section-servicios-4 servicios-section">
+      <section class="section-wrapper section-servicios-4 servicios-section scroll-animation" id="bio">
         <div class="header">
           <img src="./themes/custom/gftheme/images/icon-bio.png" alt="Energia" class="img-fluid" />
           <h4>BIOTECNOLOGÍA</h4>
@@ -123,7 +123,7 @@
         </div>
       </section>
       <!-- Section -->
-      <section class="section-wrapper section-servicios-5 servicios-section">
+      <section class="section-wrapper section-servicios-5 servicios-section scroll-animation" id="tics">
         <div class="header">
           <img src="./themes/custom/gftheme/images/icon-tics.png" alt="Energia" class="img-fluid" />
           <h4>TICS</h4>
@@ -147,17 +147,6 @@
           </div>
         </div>
       </section>
-      <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-      <div class="layout-content">
-        <div class="article-list">
-          {{ page.content }}
-        </div>
-      </div>
-      {# /.layout-content #} {% if page.sidebar %}
-      <aside class="layout-sidebar-first" role="complementary">
-        {{ page.sidebar }}
-      </aside>
-      {% endif %}
     </main>
 
     {% if page.footer %}

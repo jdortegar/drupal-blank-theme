@@ -1,12 +1,15 @@
 .servicios-section {
-  min-height: 90vh;
+  min-height: 70vh;
   color: #fff;
   text-align: center;
-  padding: 200px 0;
-  margin-top: -100px;
+  padding: 100px 0 0 0;
+  margin-top: -80px;
+  z-index: 5;
+  position: relative;
 
   &:first-child {
-    margin-top: 0;
+    margin-top: 100px;
+    padding: 50px 0 0 0;
   }
   .header {
     margin: 0 50px;
@@ -16,7 +19,7 @@
     }
   }
   .content {
-    margin-top: 50px;
+    margin-top: 25px;
     padding: 0 10%;
   }
 }
@@ -24,27 +27,38 @@
 .section-servicios-1 {
   background: url(../images/img-servicios-1.png) no-repeat center bottom;
   background-size: cover;
+  z-index: 4;
+  .circle-container {
+    margin: 1%;
+    width: 18%;
+    @media (max-width: 1200px) {
+      display: flex;
+      width: initial !important;
+    }
+  }
   .content {
     margin-top: 50px;
     padding: 0 10%;
   }
   .circle {
-    width: 175px;
+    width: 150px;
     background: #f2c453;
     border-radius: 50%;
-    height: 175px;
+    height: 150px;
     vertical-align: middle;
     font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: auto;
+    font-size: 0.9em;
   }
 }
 
 .section-servicios-2 {
   background: url(../images/img-servicios-2.png) no-repeat center center;
   background-size: cover;
+  z-index: 3;
   .content {
     div {
       text-align: left;
@@ -80,6 +94,7 @@
 .section-servicios-3 {
   background: url(../images/img-servicios-3.png) no-repeat center center;
   background-size: cover;
+  z-index: 2;
   .content {
     margin: auto;
     display: flex;
@@ -102,29 +117,35 @@
 .section-servicios-4 {
   background: url(../images/img-servicios-4.png) no-repeat center center;
   background-size: cover;
+  z-index: 1;
   .content {
     margin-top: 50px;
     padding: 0 10%;
   }
   .circle {
-    width: 175px;
+    width: 150px;
     line-height: 1.2;
     background: transparent;
     border: 6px solid #f2c453;
     border-radius: 50%;
-    height: 175px;
+    height: 150px;
     vertical-align: middle;
     font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: auto;
+    font-size: 0.9em;
   }
 }
 
 .section-servicios-5 {
   background: url(../images/img-servicios-5.png) no-repeat center center;
   background-size: cover;
+  z-index: 0;
+  img {
+    max-width: 100px;
+  }
   .content {
     margin-top: 50px;
     padding: 0 10%;
@@ -132,5 +153,21 @@
   .text {
     margin-top: 42px;
     font-weight: 700;
+  }
+}
+
+.scroll-animation {
+  transform: translateY(-250px);
+  opacity: 0;
+}
+
+.come-in {
+  animation: come-in 0.8s ease forwards;
+}
+
+@keyframes come-in {
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

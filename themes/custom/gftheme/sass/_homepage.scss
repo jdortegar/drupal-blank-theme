@@ -1,11 +1,9 @@
 .carousel-container {
-  position: absolute;
-  top: 0;
-  height: 100vh;
+  position: relative;
   .carousel-content {
     position: absolute;
     top: 50%;
-    transform: translateY(-40%);
+    transform: translateY(-50%);
   }
 }
 
@@ -33,8 +31,8 @@
   }
 }
 
-#negocios {
-  margin-top: 80vh;
+.negocios-container {
+  justify-content: center;
 }
 
 .negocio {
@@ -42,6 +40,7 @@
   min-width: 200px;
   max-width: 300px;
   margin: auto;
+  width: 100%;
   .negocio-content {
     position: absolute;
     top: 50%;
@@ -53,29 +52,91 @@
   }
 }
 .servicios-container {
-  .mid-column-servicios {
+  .column-servicios {
     background: #f2c453;
-    padding: 40px 20px !important;
+    padding: 40px !important;
     color: #fff;
+    cursor: pointer;
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin: 0 25%;
+    @media (min-width: 1200px) {
+      flex: 0 0 50%;
+      max-width: 50%;
+      margin: 0;
+    }
+    h4 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.2em;
+      font-weight: 700;
+    }
     img {
       width: 80%;
     }
-    li {
-      font-size: 12px;
+
+    .text-left-expanded {
+      text-align: left;
+    }
+
+    &.consultoria-container {
+      text-align: left;
+      ol {
+        padding-left: 20px;
+      }
+      li {
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+    }
+
+    svg {
+      width: 100%;
+    }
+
+    &.hidden-element {
+      h4 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 1em;
+        font-weight: 400;
+      }
+      background: #f6f6f6;
+      color: #223362;
+      height: 220px;
+      flex: 0 0 50%;
+      max-width: 50%;
+      margin: 0 25%;
+      @media (min-width: 1200px) {
+        flex: 0 0 25%;
+        max-width: 25%;
+        margin: 0;
+      }
+
+      .expanded {
+        display: none;
+      }
+      .text-left-expanded {
+        text-align: center;
+      }
     }
   }
 }
 
 .informes-container {
   margin: 40px 0;
-  .informes-element-container {
-    padding: 0 25px;
-  }
   .informes-title {
     display: flex;
-    justify-content: space-between;
+    margin-bottom: 10px;
+    img {
+      width: 40%;
+      margin-right: 10px;
+    }
     h4 {
       text-align: left;
+      font-size: 1.25em;
     }
   }
 
@@ -103,7 +164,7 @@
     .btn-newsletter {
       background: #f2c453;
       font-weight: 700;
-      font-size: 14px;
+      font-size: 0.75em;
       color: #fff;
       width: 100%;
       margin: 10px 0;
@@ -145,40 +206,111 @@
 }
 
 .prensa-element-container {
-  padding: 0 25px;
+  padding: 25px;
   max-width: 300px;
 
   .prensa-title {
     display: flex;
     justify-content: space-between;
-    img {
-      max-width: 50%;
-      height: auto;
+    .image-element {
+      width: 50%;
       padding: 5px;
+      align-self: center;
+      img {
+        max-height: 150px;
+        width: 100%;
+        height: auto;
+      }
     }
     h4 {
       text-align: left;
     }
     .prensa-content {
+      width: 50%;
       p,
       .date {
         font-size: 12px;
         margin-bottom: 10px;
+        word-break: break-all;
+        overflow: hidden;
+        max-height: 50px;
       }
     }
   }
 
-  .blue-container {
+  a {
     background: #223362;
     color: #fff;
     padding: 2px 5px;
     position: relative;
     text-align: center;
-    img {
+    display: block;
+    &::after {
+      content: url(../images/icon-arrow.png);
       position: absolute;
       right: 10px;
       top: 50%;
-      transform: translatey(-50%);
+      transform: translatey(-42%);
     }
   }
+}
+
+.st0-graph2 {
+  fill: #223362;
+}
+
+.st1-graph2 {
+  font-family: 'Roboto-Bold';
+}
+
+.st2-graph2 {
+  font-size: 12.3987px;
+}
+
+.st3-graph2 {
+  fill: none;
+  stroke: #223362;
+  stroke-width: 0.8938;
+  stroke-miterlimit: 10;
+}
+
+// Servicios first svg
+
+.st0 {
+  fill: #fafafa;
+}
+
+.st1 {
+  font-weight: 700;
+}
+
+.st2 {
+  font-size: 24px;
+}
+
+.st3 {
+  fill: none;
+  stroke: #223362;
+  stroke-width: 3;
+  stroke-miterlimit: 10;
+}
+
+.st4 {
+  fill: #223362;
+}
+
+.st5 {
+  fill: none;
+}
+
+.st6 {
+  fill: #ffffff;
+}
+
+.st7 {
+  font-weight: 400;
+}
+
+.st8 {
+  font-size: 14px;
 }
