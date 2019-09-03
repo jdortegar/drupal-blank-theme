@@ -1,0 +1,95 @@
+{% set yearArrayColumn = [] %}
+{%set viewId=rows[0]['content']['#row']._entity.id()%}
+<!-- Modal -->
+<div class="modal fade" id="exampleModal-{{viewId}}" tabindex="-1" role="dialog"
+  aria-labelledby="exampleModalLabel-{{viewId}}" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content">
+
+      <button type="button" class="close close-button" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+
+
+
+      <div class="informes-section">
+
+        <div class="row">
+          <!-- Years tabs -->
+          <div class="col-2"></div>
+          <div class="col-10">
+            <h4 class="font-bold" id="{{ view.name }}">{{ view.getTitle() }} </h4>
+          </div>
+          <div class="col-2">
+            <div class="nav flex-column nav-pills" id="v-pills-tab-{{viewId}}" role="tablist"
+              aria-orientation="vertical">
+              {% for row in rows %}
+              {% set year = row['content']['#row']._entity.field_fecha.value | date('Y') %}
+              {% if year not in yearArrayColumn %}
+
+
+              <a class="nav-link {{loop.first ? 'active' : ''}}" id="v-pills-{{ year }}-tab-{{viewId}}"
+                data-toggle="pill" href="#v-pills-{{ year }}-{{viewId}}" role="tab"
+                aria-controls="v-pills-{{ year }}-{{viewId}}" aria-selected="{{loop.first}}">{{ year }}</a>
+              {% set yearArrayColumn = yearArrayColumn | merge([year]) %}
+              {% endif %}
+
+              {% endfor %}
+            </div>
+          </div>
+
+          <!-- PILL CONTENT -->
+          <div class="col-10">
+            <div class="tab-content" id="v-pills-tabContent-{{viewId}}">
+              {% for years in yearArrayColumn %}
+
+              <div class="tab-pane fade {{ loop.first ? 'show active':''}}" id="v-pills-{{years}}-{{viewId}}"
+                role="tabpanel" aria-labelledby="v-pills-{{years}}-tab-{{viewId}}">
+
+                <!-- PILL CAROUSEL BEGIN -->
+                <div id="carouselInformes-{{years}}-{{viewId}}" class="carousel slide">
+
+
+                  <ol class="carousel-indicators informes-indicators">
+                    {% for group in rows|batch(6) %}
+                    {% set yearFilter = row['content']['#row']._entity.field_fecha.value | date('Y') %}
+                    {%if yearFilter == years%}
+                    <li data-target="#carouselInformes-{{years}}-{{viewId}}" data-slide-to="{{loop.index}}"
+                      class="{{ loop.first ? 'active' : '' }}"></li>
+                    {% endif %}
+
+                    {% endfor %}
+                  </ol>
+
+
+                  <div class="carousel-inner">
+                    {% for group in rows|batch(6) %}
+                    <div class="carousel-item {{ loop.first ? 'active' : '' }} ">
+                      <div class="informes-content-container justify-content-top">
+                        {% for row in group %}
+                        {% set yearFilter = row['content']['#row']._entity.field_fecha.value | date('Y') %}
+                        {%if yearFilter == years%}
+                        {{ row.content }}
+                        {% endif %}
+                        {% endfor %}
+                      </div>
+                    </div>
+                    {% endfor %}
+
+
+                  </div>
+
+                </div>
+
+                <!-- PILL CAROUSEL END -->
+
+              </div>
+              {% endfor %}
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

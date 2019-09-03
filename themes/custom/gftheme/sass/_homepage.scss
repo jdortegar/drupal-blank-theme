@@ -7,6 +7,10 @@
   }
 }
 
+.logo-section-1 {
+  margin-bottom: 20px;
+}
+
 .article-list {
   h3 {
     a {
@@ -127,6 +131,7 @@
 
 .informes-container {
   margin: 40px 0;
+
   .informes-title {
     display: flex;
     margin-bottom: 10px;
@@ -146,6 +151,7 @@
     padding: 2px 5px;
     position: relative;
     text-align: left;
+    cursor: pointer;
     img {
       position: absolute;
       right: 10px;

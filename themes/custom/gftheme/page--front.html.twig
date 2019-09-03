@@ -9,7 +9,7 @@
         <div class="carousel-content">
           <div class="col-sm-11 col-xl-4 offset-sm-1">
             <div class="row align-items-center">
-              <div class="col-sm-4 col-xl-12">
+              <div class="col-sm-4 col-xl-12 logo-section-1">
                 <img src="./themes/custom/gftheme/images/gf-logo.png" alt="Global Foresight" class="img-fluid" />
               </div>
               <div class="col-sm-7 col-xl-12">
@@ -270,7 +270,7 @@
                   Agronegocios
                 </h4>
               </div>
-              <div class="blue-container align-items-center">
+              <div class="blue-container align-items-center" data-toggle="modal" data-target="#exampleModal-114">
                 Ver Informes
                 <img src="./themes/custom/gftheme/images/icon-yellow-plus.png" alt="Agronegocios" class="img-fluid" />
               </div>
@@ -286,7 +286,7 @@
                   de carbono
                 </h4>
               </div>
-              <div class="blue-container align-items-center">
+              <div class="blue-container align-items-center" data-toggle="modal" data-target="#exampleModal-122">
                 Ver Informes
                 <img src="./themes/custom/gftheme/images/icon-yellow-plus.png" alt="Agronegocios" class="img-fluid" />
               </div>
@@ -294,13 +294,14 @@
           </div>
           <div class="col-lg-3">
             <div class="informes-element-container">
+
               <div class="informes-title align-items-end">
                 <img src="./themes/custom/gftheme/images/icon-yellow-bio.png" alt="Agronegocios" class="img-fluid" />
                 <h4 class="font-bold">
                   Biotecnología
                 </h4>
               </div>
-              <div class="blue-container align-items-center">
+              <div class="blue-container align-items-center" data-toggle="modal" data-target="#exampleModal-151">
                 Ver Informes
                 <img src="./themes/custom/gftheme/images/icon-yellow-plus.png" alt="Agronegocios" class="img-fluid" />
               </div>
@@ -319,7 +320,8 @@
                   renovables
                 </h4>
               </div>
-              <div class="blue-container align-items-center">
+
+              <div class="blue-container align-items-center" data-toggle="modal" data-target="#exampleModal-159">
                 Ver Informes
                 <img src="./themes/custom/gftheme/images/icon-yellow-plus.png" alt="Agronegocios" class="img-fluid" />
               </div>
@@ -334,7 +336,7 @@
                   empresarial
                 </h4>
               </div>
-              <div class="blue-container align-items-center">
+              <div class="blue-container align-items-center" data-toggle="modal" data-target="#exampleModal-102">
                 Ver Informes
                 <img src="./themes/custom/gftheme/images/icon-yellow-plus.png" alt="Agronegocios" class="img-fluid" />
               </div>
@@ -348,14 +350,14 @@
                   TICS
                 </h4>
               </div>
-              <div class="blue-container align-items-center">
+              <div class="blue-container align-items-center" data-toggle="modal" data-target="#exampleModal-131">
                 Ver Informes
                 <img src="./themes/custom/gftheme/images/icon-yellow-plus.png" alt="Agronegocios" class="img-fluid" />
               </div>
             </div>
           </div>
         </div>
-        <div class="informes-container row align-items-center justify-content-center">
+        {# <div class="informes-container row align-items-center justify-content-center">
           <div class="newsletter-container col-lg-3">
             <div class="informes-element-container">
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
@@ -363,7 +365,7 @@
               <button type="button" class="btn btn-newsletter" class="">ME GUSTARÍA RECIBIR INFORMES</button>
             </div>
           </div>
-        </div>
+        </div> #}
       </section>
 
       <!-- EVENTOS -->
@@ -421,9 +423,11 @@
         </div>
       </section>
 
-      {{ page.informes }}
-
+      <!-- PRENSA -->
       {{ page.prensa }}
+
+      <!-- INFORMES -->
+      {{ page.informes }}
 
     </main>
 
