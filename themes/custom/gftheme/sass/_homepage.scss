@@ -195,6 +195,8 @@
 
   .content {
     margin-top: 20px;
+    overflow: scroll;
+    height: 300px;
     ul {
       list-style: none;
       margin: 0;

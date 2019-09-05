@@ -1,0 +1,7 @@
+ajax_call:
+  path: '/custom/ajax/eventos'
+  defaults:
+    _title: 'Events'
+    _controller: '\Drupal\ajax_call\Controller\eventosController::eventosDetails'
+  requirements:
+    _permission: 'access content'

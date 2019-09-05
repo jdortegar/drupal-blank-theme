@@ -1,0 +1,42 @@
+{% set eventsYearArrayColumn = [] %}
+{% set viewId=rows[0]['content']['#row']._entity.id() %}
+
+
+<div class="contact-loader" style="display: none"><img src="./themes/custom/gftheme/images/loading.gif" /></div>
+<div class="contactblock">
+  {{ rows[0].content }}
+</div>
+
+{% if rows | length > 1%}
+<div class="old-events gf-yellow-text font-bold">
+  <div>Conocé los eventos anteriores ></div>
+  <div class="years">
+
+    {% for row in rows %}
+    {% set yearEvent = row['content']['#node'].field_fecha_evento[0].value | date('Y') %}
+
+
+    {% if yearEvent not in eventsYearArrayColumn %}
+
+    <div class="events-per-year">{{ yearEvent }}
+      <div class="events-container-post" style="display: none">
+        <ul>
+          {% for row in rows %}
+          {% set yearFilter = row['content']['#node'].field_fecha_evento[0].value | date('Y') %}
+          {% if yearFilter == yearEvent %}
+          <li class="ajaxrequest" data-nid="{{row['content']['#node'].nid[0].value }}">
+            {{row['content']['#node'].title[0].value }}</li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    {# {% if not loop.fisrt %}-{% endif %} #}
+
+    {% set eventsYearArrayColumn = eventsYearArrayColumn | merge([yearEvent]) %}
+    {% endif %}
+
+    {% endfor %}
+  </div>
+</div>
+{% endif %}

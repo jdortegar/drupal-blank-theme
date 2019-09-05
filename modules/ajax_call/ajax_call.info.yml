@@ -1,0 +1,5 @@
+name: Ajax Call
+type: module
+description: Do Ajax Call
+package: Custom
+core: 8.x

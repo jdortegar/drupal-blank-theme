@@ -122,13 +122,13 @@ p {
   min-height: 70vh;
   color: #fff;
   text-align: center;
-  padding: 100px 0 0 0;
+  padding: 200px 0;
   margin-top: -80px;
   z-index: 5;
   position: relative; }
   .servicios-section:first-child {
-    margin-top: 100px;
-    padding: 50px 0 0 0; }
+    margin-top: 150px;
+    padding: 50px 0 100px 0; }
   .servicios-section .header {
     margin: 0 50px;
     border-bottom: 1px solid #fff; }
@@ -300,6 +300,72 @@ p {
         cursor: pointer; }
         .informes-section .informes-content-container .informe-element-container .download .download-icon {
           fill: #223362; }
+
+.old-events {
+  transform: translate(0, -48px); }
+
+.years {
+  display: flex; }
+
+.eventos-container .carousel-item {
+  max-height: 480px; }
+
+.events-per-year {
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  margin-right: 5px; }
+  .events-per-year::after {
+    content: '-';
+    margin-left: 5px; }
+  .events-per-year:last-child::after {
+    content: '';
+    margin-left: 0; }
+
+.events-container-post {
+  background: #f2c453;
+  color: #223362;
+  font-size: 0.75em;
+  font-weight: 400;
+  padding: 10px;
+  position: absolute;
+  transform: translate(0, -110%); }
+  .events-container-post:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    margin-left: -10px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: #f2c453 transparent transparent transparent; }
+  .events-container-post ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: column wrap;
+    height: 80px; }
+    .events-container-post ul li {
+      border-bottom: 1px solid #fff;
+      margin: 0px 10px;
+      padding: 0 10px;
+      min-width: 200px;
+      width: 50%; }
+
+.contact-loader {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.75);
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+  height: 100%; }
+  .contact-loader img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px; }
 
 .main-header {
   z-index: 10;
@@ -535,7 +601,9 @@ p {
   font-weight: 700; }
 
 .eventos-container .content {
-  margin-top: 20px; }
+  margin-top: 20px;
+  overflow: scroll;
+  height: 300px; }
   .eventos-container .content ul {
     list-style: none;
     margin: 0;

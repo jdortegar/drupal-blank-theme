@@ -7,7 +7,7 @@ jQuery(document).ready(function($) {
 
       document.querySelector(this.getAttribute('href')).scrollIntoView({
         behavior: 'smooth',
-        block: 'center'
+        block: 'center',
       });
     });
   });
@@ -43,11 +43,53 @@ jQuery(document).ready(function($) {
   // Servicios funtionality
 
   $('.column-servicios').each(function() {
-    console.log('services');
     var elSelector = $(this);
     elSelector.click(function() {
       $('.column-servicios').addClass('hidden-element', { duration: 1500 });
       elSelector.removeClass('hidden-element', { duration: 1500 });
     });
   });
+
+  //
+
+  $('.events-per-year').each(function() {
+    var yearsSelector = $(this);
+    yearsSelector.on('mouseenter', function() {
+      yearsSelector.find('.events-container-post').show();
+    });
+    yearsSelector.on('mouseleave', function() {
+      yearsSelector.find('.events-container-post').hide();
+    });
+  });
+
+  //  Ajax Call
+  // Ajax bring contact us item on page
+  $('.ajaxrequest').each(function() {
+    var eventRequestSelector = $(this);
+    eventRequestSelector.on('click', function() {
+      var evento_selected = $(this).data('nid');
+      var err = '';
+
+      var protocol_domain = window.location.href;
+      var protocol_domain_arr = protocol_domain.split('/');
+      var protocol_domain_val =
+        protocol_domain_arr[0] + '//' + protocol_domain_arr[2];
+      if (protocol_domain_arr[3].length == 2) {
+        protocol_domain_val += '/' + protocol_domain_arr[3];
+      }
+      $('.contact-loader').show();
+      $.ajax({
+        type: 'GET',
+        url: protocol_domain_val + '/d8theming' + '/custom/ajax/eventos',
+        data: 'evento_selected=' + evento_selected,
+        dataType: 'html',
+        async: true,
+        complete: function(data) {
+          $('.contact-loader').hide();
+          $('.contactblock').html(data.responseText);
+        },
+      });
+    });
+  });
+  //end JS
 });

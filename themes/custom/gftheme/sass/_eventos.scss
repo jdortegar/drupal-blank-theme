@@ -1,0 +1,83 @@
+.old-events {
+  transform: translate(0, -48px);
+}
+
+.years {
+  display: flex;
+}
+.eventos-container {
+  .carousel-item {
+    max-height: 480px;
+  }
+}
+.events-per-year {
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  margin-right: 5px;
+
+  &::after {
+    content: '-';
+    margin-left: 5px;
+  }
+
+  &:last-child {
+    &::after {
+      content: '';
+      margin-left: 0;
+    }
+  }
+}
+
+.events-container-post {
+  background: #f2c453;
+  color: #223362;
+  font-size: 0.75em;
+  font-weight: 400;
+  padding: 10px;
+  position: absolute;
+  transform: translate(0, -110%);
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    margin-left: -10px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: #f2c453 transparent transparent transparent;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: column wrap;
+    height: 80px;
+    li {
+      border-bottom: 1px solid #fff;
+      margin: 0px 10px;
+      padding: 0 10px;
+      min-width: 200px;
+      width: 50%;
+    }
+  }
+}
+
+.contact-loader {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.75);
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+  height: 100%;
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+  }
+}
