@@ -20,17 +20,17 @@ jQuery(document).ready(function($) {
     var scroll = $(window).scrollTop();
 
     if (scroll >= 100) {
-      $('.main-header, .main-navigation, .social-networks').addClass('blue');
+      $('.main-header, .main-navigation, .social-networks').addClass('front');
     } else {
-      $('.main-header, .main-navigation, .social-networks').removeClass('blue');
+      $('.main-header, .main-navigation, .social-networks').removeClass(
+        'front'
+      );
     }
 
     /* Check the location of each desired element */
     $('.scroll-animation').each(function() {
       var bottom_of_object = $(this).position().top + $(this).outerHeight() / 2;
       var bottom_of_window = $(window).scrollTop() + $(window).height();
-      console.log('bottom_of_object', bottom_of_object);
-      console.log('bottom_of_window', bottom_of_window);
 
       /* If the object is completely visible in the window, fade it it */
       if (bottom_of_window > bottom_of_object) {
@@ -54,11 +54,12 @@ jQuery(document).ready(function($) {
 
   $('.events-per-year').each(function() {
     var yearsSelector = $(this);
+    var eventYearsContainer = yearsSelector.find('.events-container-post');
     yearsSelector.on('mouseenter', function() {
       yearsSelector.find('.events-container-post').show();
     });
     yearsSelector.on('mouseleave', function() {
-      yearsSelector.find('.events-container-post').hide();
+      eventYearsContainer.hide();
     });
   });
 
@@ -80,7 +81,7 @@ jQuery(document).ready(function($) {
       $('.contact-loader').show();
       $.ajax({
         type: 'GET',
-        url: protocol_domain_val + '/d8theming' + '/custom/ajax/eventos',
+        url: protocol_domain_val + '/custom/ajax/eventos',
         data: 'evento_selected=' + evento_selected,
         dataType: 'html',
         async: true,

@@ -1,4 +1,4 @@
-<header class="main-header {{menuColor}}" role="banner">
+<header class="main-header {{ is_front ? '' : 'blue' }}" role="banner">
 
   {{ page.header }}
   <div class="container-fluid">
@@ -26,7 +26,7 @@
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
       </div> -->
-      <div class="social-networks {{menuColor}}">
+      <div class="social-networks {{ is_front ? '' : 'blue' }}">
         <ul class="social-network-container ">
           <li>
             <a href="/" target="_blank">
@@ -98,7 +98,7 @@
           </li>
         </ul>
       </div>
-      <div class="main-navigation {{menuColor}}">
+      <div class="main-navigation {{ is_front ? '' : 'blue' }}">
         {{page.main_navigation}}
       </div>
     </div>

@@ -1,0 +1,13 @@
+<?php
+
+use Drupal\Component\Utility\Html;
+
+/**
+ * Preprocess variables for html templates.
+ */
+function HOOK_preprocess_html(&$variables) {
+  $path_class = !$variables['is_front'] ? 'path-frontpage' : 'path-' . Html::getClass($variables['root_path']);
+  if (isset($path_class)) {
+    $variables['attributes']['class'][] = $path_class;
+  }
+}

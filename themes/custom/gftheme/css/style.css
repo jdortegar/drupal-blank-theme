@@ -127,11 +127,10 @@ p {
   z-index: 5;
   position: relative; }
   .servicios-section:first-child {
-    margin-top: 150px;
+    margin-top: 0px;
     padding: 50px 0 100px 0; }
   .servicios-section .header {
-    margin: 0 50px;
-    border-bottom: 1px solid #fff; }
+    margin: 0 50px; }
     .servicios-section .header h4 {
       font-weight: 700; }
   .servicios-section .content {
@@ -280,7 +279,9 @@ p {
     top: 0;
     right: 0;
     justify-content: flex-end;
-    transform: translate(0px, -40px); }
+    transform: translate(0px, -40px);
+    bottom: initial;
+    left: initial; }
   .informes-section .informes-content-container {
     display: flex;
     flex-flow: column wrap;
@@ -301,14 +302,14 @@ p {
         .informes-section .informes-content-container .informe-element-container .download .download-icon {
           fill: #223362; }
 
+.contactblock {
+  margin-bottom: 50px; }
+
 .old-events {
-  transform: translate(0, -48px); }
+  transform: translate(0, -100px); }
 
 .years {
   display: flex; }
-
-.eventos-container .carousel-item {
-  max-height: 480px; }
 
 .events-per-year {
   cursor: pointer;
@@ -329,12 +330,13 @@ p {
   font-weight: 400;
   padding: 10px;
   position: absolute;
-  transform: translate(0, -110%); }
+  width: max-content;
+  transform: translate(0, -103%); }
   .events-container-post:after {
     content: '';
     position: absolute;
     top: 100%;
-    left: 10%;
+    left: 20px;
     margin-left: -10px;
     border-width: 7px;
     border-style: solid;
@@ -342,16 +344,15 @@ p {
   .events-container-post ul {
     margin: 0;
     padding: 0;
-    list-style: none;
     display: flex;
     flex-flow: column wrap;
-    height: 80px; }
+    height: 200px;
+    list-style-position: inside; }
     .events-container-post ul li {
-      border-bottom: 1px solid #fff;
-      margin: 0px 10px;
+      border-bottom: 1px solid #223362;
       padding: 0 10px;
       min-width: 200px;
-      width: 50%; }
+      width: 48%; }
 
 .contact-loader {
   position: absolute;
@@ -374,7 +375,7 @@ p {
   padding: 20px 0 30px;
   transition: background-color 0.5s ease;
   top: 0; }
-  .main-header.blue, .main-header.servicios-blue {
+  .main-header.blue, .main-header.front, .main-header.servicios-blue {
     background: #fff;
     transition: background-color 0.5s ease; }
 
@@ -421,10 +422,10 @@ p {
       .main-navigation nav ul a:hover {
         text-decoration: underline; }
 
-.main-navigation.blue nav .navbar-toggler, .main-navigation.servicios-blue nav .navbar-toggler {
+.main-navigation.blue nav .navbar-toggler, .main-navigation.front nav .navbar-toggler, .main-navigation.servicios-blue nav .navbar-toggler {
   color: #223362 !important; }
 
-.main-navigation.blue nav ul a, .main-navigation.servicios-blue nav ul a {
+.main-navigation.blue nav ul a, .main-navigation.front nav ul a, .main-navigation.servicios-blue nav ul a {
   color: #223362 !important;
   border: 2px solid #223362 !important; }
 
@@ -440,7 +441,7 @@ p {
     .social-networks .social-network-container li {
       list-style: none;
       margin-left: 5px; }
-  .social-networks.blue .header-icon, .social-networks.servicios-blue .header-icon {
+  .social-networks.blue .header-icon, .social-networks.front .header-icon, .social-networks.servicios-blue .header-icon {
     fill: #223463; }
 
 .account-menu {
@@ -602,8 +603,7 @@ p {
 
 .eventos-container .content {
   margin-top: 20px;
-  overflow: scroll;
-  height: 300px; }
+  margin-bottom: 50px; }
   .eventos-container .content ul {
     list-style: none;
     margin: 0;

@@ -8,12 +8,11 @@
   position: relative;
 
   &:first-child {
-    margin-top: 150px;
+    margin-top: 0px;
     padding: 50px 0 100px 0;
   }
   .header {
     margin: 0 50px;
-    border-bottom: 1px solid #fff;
     h4 {
       font-weight: 700;
     }

@@ -1,14 +1,9 @@
 .old-events {
-  transform: translate(0, -48px);
+  transform: translate(0, -100px);
 }
 
 .years {
   display: flex;
-}
-.eventos-container {
-  .carousel-item {
-    max-height: 480px;
-  }
 }
 .events-per-year {
   cursor: pointer;
@@ -36,13 +31,14 @@
   font-weight: 400;
   padding: 10px;
   position: absolute;
-  transform: translate(0, -110%);
+  width: max-content;
+  transform: translate(0, -103%);
 
   &:after {
     content: '';
     position: absolute;
     top: 100%;
-    left: 10%;
+    left: 20px;
     margin-left: -10px;
     border-width: 7px;
     border-style: solid;
@@ -52,16 +48,15 @@
   ul {
     margin: 0;
     padding: 0;
-    list-style: none;
     display: flex;
     flex-flow: column wrap;
-    height: 80px;
+    height: 200px;
+    list-style-position: inside;
     li {
-      border-bottom: 1px solid #fff;
-      margin: 0px 10px;
+      border-bottom: 1px solid #223362;
       padding: 0 10px;
       min-width: 200px;
-      width: 50%;
+      width: 48%;
     }
   }
 }

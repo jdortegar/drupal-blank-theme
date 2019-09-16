@@ -1,4 +1,4 @@
-{% include directory ~ '/partials/header.html.twig' with {'menuColor': 'servicios-blue'}%}
+{% include directory ~ '/partials/header.html.twig'%}
 
 <div class="container-fluid">
   <div class="wrapper">
@@ -138,7 +138,7 @@
           </div>
           <div class="col">
             <img src="./themes/custom/gftheme/images/icon-telefonia.png" alt="Energia" class="img-fluid" />
-            <div class="text">TELEFONÍA</div>
+            <div class="text" style="transform: translate(0px, -10px)">TELEFONÍA</div>
           </div>
           <div class="col">
             <img src="./themes/custom/gftheme/images/icon-pagos.png" alt="Energia" class="img-fluid" />
@@ -156,4 +156,6 @@
     {% endif %}
   </div>
 </div>
+
+{% include directory ~ '/partials/footer.html.twig' %}
 {# /.layout-container #}
