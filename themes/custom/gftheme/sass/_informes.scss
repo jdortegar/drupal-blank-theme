@@ -36,7 +36,7 @@
   .informes-content-container {
     display: flex;
     flex-flow: column wrap;
-    height: 250px;
+    min-height: 250px;
     .informe-element-container {
       padding: 1%;
       width: 48%;

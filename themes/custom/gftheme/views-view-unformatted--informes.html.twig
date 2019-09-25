@@ -1,5 +1,5 @@
 {% set yearArrayColumn = [] %}
-{%set viewId=rows[0]['content']['#row']._entity.id()%}
+{% set viewId=rows[0]['content']['#row']._entity.id()%}
 <!-- Modal -->
 <div class="modal fade" id="exampleModal-{{viewId}}" tabindex="-1" role="dialog"
   aria-labelledby="exampleModalLabel-{{viewId}}" aria-hidden="true">
@@ -16,11 +16,30 @@
 
         <div class="row">
           <!-- Years tabs -->
-          <div class="col-2"></div>
-          <div class="col-10">
-            <h4 class="font-bold" id="{{ view.name }}">{{ view.getTitle() }} </h4>
+          <div class="mobile-block col-2 "></div>
+          <div class="mobile-block col-10">
+            <h4 class="font-bold desktop-version" id="{{ view.name }}">{{ view.getTitle() }} </h4>
+            {%set titleModal = view.getTitle() %}
+
+            <div class="mobile-title-informes mobile-version">
+                {% if  titleModal=="Agronegocios" %}
+                  <img src="./themes/custom/gftheme/images/icon-yellow-agro.png" alt="Agronegocios" class="img-fluid" />
+                  {% elseif  titleModal=="Mercado de Carbono" %}
+                  <img src="./themes/custom/gftheme/images/icon-yellow-mercado.png" alt="Agronegocios"
+                  class="img-fluid" />
+                  {% elseif  titleModal=="Biotecnología" %}
+                  <img src="./themes/custom/gftheme/images/icon-yellow-bio.png" alt="Agronegocios" class="img-fluid" />
+                  {% elseif  titleModal=="Energías Renovables" %}
+                  <img src="./themes/custom/gftheme/images/icon-yellow-energia.png" alt="Agronegocios"
+                  class="img-fluid" />
+                  {% elseif  titleModal=="Globalización Empresarial" %}
+                  <img src="./themes/custom/gftheme/images/icon-yellow-global.png" alt="Agronegocios" class="img-fluid" />
+                  {% elseif  titleModal=="TICS" %}
+                  <img src="./themes/custom/gftheme/images/icon-yellow-tics.png" alt="Agronegocios" class="img-fluid" />
+                {% endif %}
+</div>
           </div>
-          <div class="col-2">
+          <div class="mobile-block col-2">
             <div class="nav flex-column nav-pills" id="v-pills-tab-{{viewId}}" role="tablist"
               aria-orientation="vertical">
               {% for row in rows %}
@@ -39,7 +58,8 @@
           </div>
 
           <!-- PILL CONTENT -->
-          <div class="col-10">
+          <hr class="home-bar mobile-version" style="width: 90%">
+          <div class="mobile-block col-10">
             <div class="tab-content" id="v-pills-tabContent-{{viewId}}">
               {% for years in yearArrayColumn %}
 
@@ -49,32 +69,41 @@
                 <!-- PILL CAROUSEL BEGIN -->
                 <div id="carouselInformes-{{years}}-{{viewId}}" class="carousel slide">
 
-
                   <ol class="carousel-indicators informes-indicators">
-                    {% for group in rows|batch(6) %}
-                    {% set yearFilter = row['content']['#row']._entity.field_fecha.value | date('Y') %}
-                    {%if yearFilter == years%}
-                    <li data-target="#carouselInformes-{{years}}-{{viewId}}" data-slide-to="{{loop.index}}"
-                      class="{{ loop.first ? 'active' : '' }}"></li>
-                    {% endif %}
 
-                    {% endfor %}
+                    {% set i = 0 %}
+                    {% for row in rows if row['content']['#row']._entity.field_fecha.value | date('Y') == years %}
+                          {% if loop.index % 6 == 0 %}
+                            <li data-target="#carouselInformes-{{years}}-{{viewId}}" data-slide-to="{{ i }}"
+                      class="{{ i == 0 ? 'active' : '' }}"></li>
+                          {% set i = i + 1 %}
+                          {% endif %}
+                        {% endfor %}
                   </ol>
 
 
                   <div class="carousel-inner">
-                    {% for group in rows|batch(6) %}
-                    <div class="carousel-item {{ loop.first ? 'active' : '' }} ">
-                      <div class="informes-content-container justify-content-top">
-                        {% for row in group %}
-                        {% set yearFilter = row['content']['#row']._entity.field_fecha.value | date('Y') %}
-                        {%if yearFilter == years%}
-                        {{ row.content }}
+
+                        {% for row in rows if row['content']['#row']._entity.field_fecha.value | date('Y') == years %}
+                        {% if loop.first %}
+                          <div class="carousel-item active">
+                            <div class="informes-content-container justify-content-top">
                         {% endif %}
+
+
+                            {{ row.content }}
+
+
+                          {% if loop.index % 6 == 0 %}
+                            </div></div><div class="carousel-item">
+                            <div class="informes-content-container justify-content-top">
+                          {% endif %}
+
                         {% endfor %}
-                      </div>
-                    </div>
-                    {% endfor %}
+
+                              </div> {# close last row #}
+                              </div>
+
 
 
                   </div>

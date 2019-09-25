@@ -84,12 +84,10 @@
           {{content.field_contenido}}
         </div>
       </div>
-      <div class="col-lg-7">
+      <div class="col-lg-7 mobile-eventos-image">
 
         <div id="carousel" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
-
-
             {% for key, item in content.field_imagenes_evento if key|first != '#' %}
 
             <div class="carousel-item {{ loop.first ? 'active':''}}">
@@ -105,6 +103,12 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
+          <ol class="carousel-indicators informes-indicators">
+            {% for key, item in content.field_imagenes_evento if key|first != '#' %}
+            <li data-target="#carousel" data-slide-to="{{loop.index}}"
+              class="{{ loop.first ? 'active' : '' }}"></li>
+            {% endfor %}
+          </ol>
         </div>
       </div>
     </div>

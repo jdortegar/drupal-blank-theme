@@ -170,3 +170,73 @@
     opacity: 1;
   }
 }
+
+@media (max-width: 768px) {
+  .servicios-section {
+    &.section-wrapper {
+      padding: 100px 0 100px;
+    }
+    .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 20px;
+      h4 {
+        margin-left: 10px;
+      }
+      p {
+        width: 100%;
+        font-size: 1em;
+      }
+    }
+    .mobile-servicio-box {
+      width: 100% !important;
+      background: rgba(255, 255, 255, 0.25);
+      padding: 10px;
+      margin-bottom: 10px;
+      h6 {
+        text-align: center !important;
+      }
+
+      ul {
+        border-left: none !important;
+      }
+    }
+    .circle-container:nth-child(3) {
+      margin: 0 100px;
+    }
+  }
+
+  .section-servicios-3 {
+    & > .content {
+      width: 100%;
+      flex-direction: column;
+      .text {
+        font-size: 1em;
+      }
+    }
+  }
+
+  .section-servicios-5 {
+    & > .content {
+      width: 100%;
+      flex-direction: column;
+      .col {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        margin-bottom: 30px;
+        width: 70%;
+        img {
+          max-width: 70px;
+        }
+        .text {
+          margin-top: 0 !important;
+          text-align: left;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}

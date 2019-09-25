@@ -16,3 +16,5 @@ regions:
   prensa: 'Prensa'
   informes: 'Informes'
   eventos: 'Eventos'
+  newsletter: 'Newsletter'
+  search: 'Search'

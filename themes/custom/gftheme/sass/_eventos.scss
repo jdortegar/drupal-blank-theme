@@ -4,6 +4,7 @@
 
 .years {
   display: flex;
+  flex-wrap: wrap;
 }
 .events-per-year {
   cursor: pointer;
