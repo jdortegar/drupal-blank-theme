@@ -121,5 +121,12 @@ jQuery(document).ready(function($) {
     $('#search-field').toggle('dimmed sbox');
   });
 
+  console.log('hola');
+  $('.eventos-container .content').height(
+    $('.eventos-container .carousel-item').height() -
+      $('.old-events').height() -
+      100
+  );
+
   //end JS
 });

@@ -432,8 +432,8 @@ main,
   transform: translateX(-45%);
   text-align: center;
   margin: 0 auto;
-  width: 80px;
-  top: 20px; }
+  width: 100px;
+  top: 30px; }
   #block-gftheme-branding .logo img {
     max-width: 100%; }
 
@@ -685,7 +685,7 @@ main,
     margin-top: 20px;
     margin-bottom: 50px;
     height: 260px;
-    overflow: scroll; }
+    overflow-y: scroll; }
     .eventos-container .content ul {
       list-style: none;
       margin: 0;
