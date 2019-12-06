@@ -9,7 +9,12 @@
 
 {% if rows | length > 1%}
 <div class="old-events gf-yellow-text font-bold padding-15">
-  <div>Conocé los eventos anteriores ></div>
+  <div>{% if language.getId() == 'en' %}
+  See previous events >
+  {% elseif language.getId() == 'es' %}
+  Conocé los eventos anteriores >
+  {% endif %}
+  </div>
   <div class="years">
 
     {% for row in rows %}

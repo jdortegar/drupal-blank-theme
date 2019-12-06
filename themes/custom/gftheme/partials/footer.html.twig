@@ -4,9 +4,17 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
-          <h2>Contactanos.</h2>
-          <p>Completá tus datos y un representante
-            se contactará con vos a la brevedad.</p>
+          <h2>{% if language.getId() == 'en' %}
+            Contact us.
+            {% elseif language.getId() == 'es' %}
+            Contactanos.
+            {% endif %}</h2>
+          <p>{% if language.getId() == 'en' %}
+            Fill in your information and a representative will contact you shortly.
+            {% elseif language.getId() == 'es' %}
+            Completá tus datos y un representante
+            se contactará con vos a la brevedad.
+            {% endif %}</p>
         </div>
         <div class="col-lg-6 border-left-white">
           <div class="form">

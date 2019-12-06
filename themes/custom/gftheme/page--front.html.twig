@@ -16,15 +16,27 @@
                 <img src="./themes/custom/gftheme/images/gf-logo.png" alt="Global Foresight" class="img-fluid" />
               </div>
               <div class="col-sm-7 col-xl-12">
-                <h5 class="white-color desktop-version">Somos una organización que identifica y genera nuevas
+                <h5 class="white-color desktop-version">{% if language.getId() == 'en' %}
+                  We are an organization that identifies and creates new opportunities in challenging contexts. This
+                  way, we contribute to the promotion of companies and the creation of new ones with business models
+                  focused on the dynamics of emerging economies.
+                  {% elseif language.getId() == 'es' %}
+                  Somos una organización que identifica y genera nuevas
                   oportunidades en contextos
                   desafiantes. Así, contribuimos a la promoción de empresas y generación de nuevas compañías, con
                   modelos
                   de
-                  negocios centrados en dinámicas de las economías emergentes.</h5>
+                  negocios centrados en dinámicas de las economías emergentes.
+                  {% endif %}</h5>
                 <hr class="home-bar mobile-version">
-                <h5 class="white-color mobile-version text-center">Somos una organización que identifica y genera nuevas
-                  oportunidades en contextos desafiantes.</h5>
+                <h5 class="white-color mobile-version text-center">
+                  {% if language.getId() == 'en' %}
+                  We are an organization that identifies and creates new opportunities in challenging contexts.
+                  {% elseif language.getId() == 'es' %}
+                  Somos una organización que identifica y genera nuevas
+                  oportunidades en contextos desafiantes.
+                  {% endif %}</h5>
+                </h5>
               </div>
             </div>
           </div>
@@ -37,13 +49,13 @@
 <div class="container-fluid mobile-padding-0">
   <div class="wrapper mobile-padding-0">
     {# {{ page.primary_menu }}
-    {{ page.secondary_menu }}
+{{ page.secondary_menu }}
 
-    {{ page.breadcrumb }}
+{{ page.breadcrumb }}
 
-    {{ page.highlighted }}
+{{ page.highlighted }}
 
-    {{ page.help }} #}
+{{ page.help }} #}
 
     <main role="main">
 
@@ -61,10 +73,19 @@
                 class="img-fluid mobile-version" />
               <div class="negocio-content">
                 <img src="./themes/custom/gftheme/images/icon-energia.png" alt="Energia" class="img-fluid" />
-                <h4>Energía</h4>
+                <h4>{% if language.getId() == 'en' %}
+                  Energy
+                  {% elseif language.getId() == 'es' %}
+                  Energía
+                  {% endif %}</h4>
                 <p class="desktop-version">
+                  {% if language.getId() == 'en' %}
+                  We conduct a thorough follow-up of electric energy, a key component for the development and well-being
+                  of our societies.
+                  {% elseif language.getId() == 'es' %}
                   Realizamos un seguimiento exhaustivo de la energía eléctrica, un componente clave para el desarrollo y
                   bienestar de nuestras sociedades.
+                  {% endif %}
                 </p>
               </div>
             </a>
@@ -77,10 +98,19 @@
                 class="img-fluid mobile-version" />
               <div class="negocio-content">
                 <img src="./themes/custom/gftheme/images/icon-agro.png" alt="Agronegocios" class="img-fluid" />
-                <h4>Agronegocios</h4>
+                <h4>{% if language.getId() == 'en' %}
+                  Agribusinesses
+                  {% elseif language.getId() == 'es' %}
+                  Agronegocios
+                  {% endif %}</h4>
                 <p class="desktop-version">
+                  {% if language.getId() == 'en' %}
+                  We analyze perspectives of agriculture and its components: essential to economic growth and
+                  sustainable development.
+                  {% elseif language.getId() == 'es' %}
                   Analizamos las perspectivas de la agricultura y sus componentes: fundamentales para el crecimiento
                   económico y el desarrollo sostenible.
+                  {% endif %}
                 </p>
               </div>
             </a>
@@ -93,10 +123,19 @@
                 class="img-fluid mobile-version" />
               <div class="negocio-content">
                 <img src="./themes/custom/gftheme/images/icon-medio.png" alt="Medio ambiente" class="img-fluid" />
-                <h4>Medio ambiente</h4>
+                <h4>{% if language.getId() == 'en' %}
+                  Environment
+                  {% elseif language.getId() == 'es' %}
+                  Medio ambiente
+                  {% endif %}</h4>
                 <p class="desktop-version">
+                  {% if language.getId() == 'en' %}
+                  We collaborate with incentives to make the private and corporate sector reduce their emissions in an
+                  efficient and competitive way.
+                  {% elseif language.getId() == 'es' %}
                   Colaboramos en el incentivo para que el sector privado y empresarial reduzca sus emisiones de manera
                   eficiente y competitiva.
+                  {% endif %}
                 </p>
               </div>
             </a>
@@ -109,10 +148,19 @@
                 class="img-fluid mobile-version" />
               <div class="negocio-content">
                 <img src="./themes/custom/gftheme/images/icon-bio.png" alt="Biotecnología" class="img-fluid" />
-                <h4>Biotecnología</h4>
+                <h4>{% if language.getId() == 'en' %}
+                  Biotechnology
+                  {% elseif language.getId() == 'es' %}
+                  Biotecnología
+                  {% endif %}</h4>
                 <p class="desktop-version">
+                  {% if language.getId() == 'en' %}
+                  We leverage investment opportunities in emerging countries, considering discoveries related to new
+                  products and markets.
+                  {% elseif language.getId() == 'es' %}
                   Aprovechamos las oportunidades de inversión en los países emergentes, considerando descubrimientos
                   relacionados a nuevos productos y mercados.
+                  {% endif %}
                 </p>
               </div>
             </a>
@@ -124,10 +172,19 @@
                 class="img-fluid mobile-version" />
               <div class="negocio-content">
                 <img src="./themes/custom/gftheme/images/icon-tics.png" alt="TICS" class="img-fluid" />
-                <h4>TICS</h4>
+                <h4>{% if language.getId() == 'en' %}
+                  TICS
+                  {% elseif language.getId() == 'es' %}
+                  TICS
+                  {% endif %}</h4>
                 <p class="desktop-version">
+                  {% if language.getId() == 'en' %}
+                  We adapt to the evolution and permanent development offered by Information and Communication
+                  Technology.
+                  {% elseif language.getId() == 'es' %}
                   Nos adaptamos a la evolución y desarrollo permanente que ofrecen las Tecnologías de Información y
                   Comunicación.
+                  {% endif %}
                 </p>
               </div>
             </a>
@@ -142,27 +199,58 @@
           <div class="col-sm-12 text-center column-servicios consultoria-container">
             <div class="rotate-inverse">
               <h4 class="font-bold">
+                {% if language.getId() == 'en' %}
+                CONSULTING
+                {% elseif language.getId() == 'es' %}
                 CONSULTORÍA
+                {% endif %}
               </h4>
               <p class="text-left-expanded">
+                {% if language.getId() == 'en' %}
+                We evaluate operations and plans by different companies in order to facilitate them with a diagnosis
+                that will allow them to project new business strategies.
+                {% elseif language.getId() == 'es' %}
                 Evaluamos las operaciones y planes de diversas empresas para facilitarles un diagnóstico que les permita
                 proyectar nuevas estrategias de negocios.
+                {% endif %}
               </p>
               <div class="expanded desktop-version">
-                <p class="text-left">El proceso cuenta con cuatro pasos:</p>
+                <p class="text-left">
+                  {% if language.getId() == 'en' %}
+                  The process has four steps:
+                  {% elseif language.getId() == 'es' %}
+                  El proceso cuenta con cuatro pasos:
+                  {% endif %}</p>
                 <ol class="text-left">
+                  {% if language.getId() == 'en' %}
+                  <li>Feedback: company-client information</li>
+                  <li>Diagnostics</li>
+                  <li>Solutions: management of the environment and resource mobilization</li>
+                  <li>Implementation</li>
+                  {% elseif language.getId() == 'es' %}
                   <li>Feedback: información empresa-cliente</li>
                   <li>Diagnóstico</li>
                   <li>Soluciones: gestión del entorno y movilización de recursos</li>
                   <li>Implementación</li>
+                  {% endif %}
                 </ol>
               </div>
             </div>
           </div>
           <div class="col-sm-12 text-center column-servicios hidden-element">
             <div class="rotate-inverse">
-              <h4 class="font-bold">FUNDRAISING</h4>
-              <p>Ofrecemos un modelo de negocio centrado en las dinámicas de las economías emergentes.</p>
+              <h4 class="font-bold">
+                {% if language.getId() == 'en' %}
+                FUNDRAISING
+                {% elseif language.getId() == 'es' %}
+                FUNDRAISING
+                {% endif %}
+              </h4>
+              <p>{% if language.getId() == 'en' %}
+                We offer a business model focused on the dynamics of emerging economies.
+                {% elseif language.getId() == 'es' %}
+                Ofrecemos un modelo de negocio centrado en las dinámicas de las economías emergentes.
+                {% endif %}</p>
               <div class="expanded desktop-version">
                 <!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In  -->
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -239,15 +327,26 @@
           <div class="col-sm-12 text-center column-servicios hidden-element">
             <div class="rotate-inverse">
               <h4 class="font-bold">
+                {% if language.getId() == 'en' %}
+                SUPPORT
+                {% elseif language.getId() == 'es' %}
                 SOPORTE
+                {% endif %}
               </h4>
-              <p class="text-left-expanded">
+              <p class="text-left-expanded">{% if language.getId() == 'en' %}
+                Through a renovated and customized design we promote our clients’ activities in local and international
+                markets.
+                {% elseif language.getId() == 'es' %}
                 Impulsamos con un diseño renovado y personalizado las actividades de nuestros clientes en mercados
                 locales
                 e internacionales.
-              </p>
+                {% endif %}</p>
               <div class="expanded desktop-version">
-                <p class="text-left">Nuestra visión global consiste en:</p>
+                <p class="text-left">{% if language.getId() == 'en' %}
+                  Our global vision consists of:
+                  {% elseif language.getId() == 'es' %}
+                  Nuestra visión global consiste en:
+                  {% endif %}</p>
                 <!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In  -->
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                   xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="704.8px"
@@ -296,11 +395,19 @@
               <div class="informes-title align-items-end">
                 <img src="./themes/custom/gftheme/images/icon-yellow-agro.png" alt="Agronegocios" class="img-fluid" />
                 <h4 class="font-bold">
+                  {% if language.getId() == 'en' %}
+                  Agribusinesses
+                  {% elseif language.getId() == 'es' %}
                   Agronegocios
+                  {% endif %}
                 </h4>
               </div>
               <div class="blue-container align-items-center" data-toggle="modal" data-target="#exampleModal-227">
+                {% if language.getId() == 'en' %}
+                See Reports
+                {% elseif language.getId() == 'es' %}
                 Ver Informes
+                {% endif %}
                 <img src="./themes/custom/gftheme/images/icon-yellow-plus.png" alt="Agronegocios" class="img-fluid" />
               </div>
             </div>
@@ -311,12 +418,20 @@
                 <img src="./themes/custom/gftheme/images/icon-yellow-mercado.png" alt="Agronegocios"
                   class="img-fluid" />
                 <h4 class="font-bold">
+                  {% if language.getId() == 'en' %}
+                  Carbon Market
+                  {% elseif language.getId() == 'es' %}
                   Mercado<br />
                   de carbono
+                  {% endif %}
                 </h4>
               </div>
               <div class="blue-container align-items-center" data-toggle="modal" data-target="#exampleModal-230">
+                {% if language.getId() == 'en' %}
+                See Reports
+                {% elseif language.getId() == 'es' %}
                 Ver Informes
+                {% endif %}
                 <img src="./themes/custom/gftheme/images/icon-yellow-plus.png" alt="Agronegocios" class="img-fluid" />
               </div>
             </div>
@@ -327,11 +442,19 @@
               <div class="informes-title align-items-end">
                 <img src="./themes/custom/gftheme/images/icon-yellow-bio.png" alt="Agronegocios" class="img-fluid" />
                 <h4 class="font-bold">
+                  {% if language.getId() == 'en' %}
+                  Biotechnology
+                  {% elseif language.getId() == 'es' %}
                   Biotecnología
+                  {% endif %}
                 </h4>
               </div>
               <div class="blue-container align-items-center" data-toggle="modal" data-target="#exampleModal-234">
+                {% if language.getId() == 'en' %}
+                See Reports
+                {% elseif language.getId() == 'es' %}
                 Ver Informes
+                {% endif %}
                 <img src="./themes/custom/gftheme/images/icon-yellow-plus.png" alt="Agronegocios" class="img-fluid" />
               </div>
             </div>
@@ -345,13 +468,21 @@
                 <img src="./themes/custom/gftheme/images/icon-yellow-energia.png" alt="Agronegocios"
                   class="img-fluid" />
                 <h4 class="font-bold">
+                  {% if language.getId() == 'en' %}
+                  Renewable Energies
+                  {% elseif language.getId() == 'es' %}
                   Energías <br />
                   renovables
+                  {% endif %}
                 </h4>
               </div>
 
               <div class="blue-container align-items-center" data-toggle="modal" data-target="#exampleModal-235">
+                {% if language.getId() == 'en' %}
+                See Reports
+                {% elseif language.getId() == 'es' %}
                 Ver Informes
+                {% endif %}
                 <img src="./themes/custom/gftheme/images/icon-yellow-plus.png" alt="Agronegocios" class="img-fluid" />
               </div>
             </div>
@@ -361,12 +492,20 @@
               <div class="informes-title align-items-end">
                 <img src="./themes/custom/gftheme/images/icon-yellow-global.png" alt="Agronegocios" class="img-fluid" />
                 <h4 class="font-bold">
+                  {% if language.getId() == 'en' %}
+                  Corporate Globalization
+                  {% elseif language.getId() == 'es' %}
                   Globalización <br />
                   empresarial
+                  {% endif %}
                 </h4>
               </div>
               <div class="blue-container align-items-center" data-toggle="modal" data-target="#exampleModal-237">
+                {% if language.getId() == 'en' %}
+                See Reports
+                {% elseif language.getId() == 'es' %}
                 Ver Informes
+                {% endif %}
                 <img src="./themes/custom/gftheme/images/icon-yellow-plus.png" alt="Agronegocios" class="img-fluid" />
               </div>
             </div>
@@ -376,11 +515,19 @@
               <div class="informes-title align-items-end">
                 <img src="./themes/custom/gftheme/images/icon-yellow-tics.png" alt="Agronegocios" class="img-fluid" />
                 <h4 class="font-bold">
+                  {% if language.getId() == 'en' %}
                   TICS
+                  {% elseif language.getId() == 'es' %}
+                  TICS
+                  {% endif %}
                 </h4>
               </div>
               <div class="blue-container align-items-center" data-toggle="modal" data-target="#exampleModal-240">
+                {% if language.getId() == 'en' %}
+                See Reports
+                {% elseif language.getId() == 'es' %}
                 Ver Informes
+                {% endif %}
                 <img src="./themes/custom/gftheme/images/icon-yellow-plus.png" alt="Agronegocios" class="img-fluid" />
               </div>
             </div>
@@ -401,7 +548,11 @@
               <div class="informes-title align-items-end">
                 <img src="./themes/custom/gftheme/images/icon-yellow-agro.png" alt="Agronegocios" class="img-fluid" />
                 <h4 class="font-bold">
+                  {% if language.getId() == 'en' %}
+                  Agribusinesses
+                  {% elseif language.getId() == 'es' %}
                   Agronegocios
+                  {% endif %}
                 </h4>
               </div>
 
@@ -413,8 +564,12 @@
                 <img src="./themes/custom/gftheme/images/icon-yellow-mercado.png" alt="Agronegocios"
                   class="img-fluid" />
                 <h4 class="font-bold">
+                  {% if language.getId() == 'en' %}
+                  Carbon Market
+                  {% elseif language.getId() == 'es' %}
                   Mercado<br />
                   de carbono
+                  {% endif %}
                 </h4>
               </div>
             </div>
@@ -425,7 +580,11 @@
               <div class="informes-title align-items-end">
                 <img src="./themes/custom/gftheme/images/icon-yellow-bio.png" alt="Agronegocios" class="img-fluid" />
                 <h4 class="font-bold">
+                  {% if language.getId() == 'en' %}
+                  Biotechnology
+                  {% elseif language.getId() == 'es' %}
                   Biotecnología
+                  {% endif %}
                 </h4>
               </div>
             </div>
@@ -439,8 +598,12 @@
                 <img src="./themes/custom/gftheme/images/icon-yellow-energia.png" alt="Agronegocios"
                   class="img-fluid" />
                 <h4 class="font-bold">
+                  {% if language.getId() == 'en' %}
+                  Renewable Energies
+                  {% elseif language.getId() == 'es' %}
                   Energías <br />
                   renovables
+                  {% endif %}
                 </h4>
               </div>
 
@@ -452,8 +615,12 @@
               <div class="informes-title align-items-end">
                 <img src="./themes/custom/gftheme/images/icon-yellow-global.png" alt="Agronegocios" class="img-fluid" />
                 <h4 class="font-bold">
+                  {% if language.getId() == 'en' %}
+                  Corporate Globalization
+                  {% elseif language.getId() == 'es' %}
                   Globalización <br />
                   empresarial
+                  {% endif %}
                 </h4>
               </div>
 
@@ -464,7 +631,11 @@
               <div class="informes-title align-items-end">
                 <img src="./themes/custom/gftheme/images/icon-yellow-tics.png" alt="Agronegocios" class="img-fluid" />
                 <h4 class="font-bold">
+                  {% if language.getId() == 'en' %}
                   TICS
+                  {% elseif language.getId() == 'es' %}
+                  TICS
+                  {% endif %}
                 </h4>
               </div>
 
@@ -482,7 +653,11 @@
 
       <!-- PRENSA -->
       <section class="section-wrapper-last" id="prensa">
-        <h3 class="mobile-version mobile-title padding-15">Prensa.</h3>
+        <h3 class="mobile-version mobile-title padding-15">{% if language.getId() == 'en' %}
+          News.
+          {% elseif language.getId() == 'es' %}
+          Prensa.
+          {% endif %}</h3>
         {{ page.prensa }}
       </section>
 
