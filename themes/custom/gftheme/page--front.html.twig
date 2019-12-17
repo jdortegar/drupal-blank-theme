@@ -2,676 +2,807 @@
 
 <!-- CAROUSEL  -->
 <div class="carousel-container" style="margin-top:-130px">
-  <div id="carouselHome" class="carousel slide">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="./themes/custom/gftheme/images/gf-back.png" alt="Global Foresight"
-          class="img-fluid desktop-version" />
-        <img src="./themes/custom/gftheme/images/gf-back-mobile.png" alt="Global Foresight"
-          class="img-fluid mobile-version" />
-        <div class="carousel-content">
-          <div class="col-sm-11 col-xl-4 offset-sm-1">
-            <div class="row align-items-center">
-              <div class="col-sm-4 col-xl-12 logo-section-1">
-                <img src="./themes/custom/gftheme/images/gf-logo.png" alt="Global Foresight" class="img-fluid" />
-              </div>
-              <div class="col-sm-7 col-xl-12">
-                <h5 class="white-color desktop-version">{% if language.getId() == 'en' %}
-                  We are an organization that identifies and creates new opportunities in challenging contexts. This
-                  way, we contribute to the promotion of companies and the creation of new ones with business models
-                  focused on the dynamics of emerging economies.
-                  {% elseif language.getId() == 'es' %}
-                  Somos una organización que identifica y genera nuevas
-                  oportunidades en contextos
-                  desafiantes. Así, contribuimos a la promoción de empresas y generación de nuevas compañías, con
-                  modelos
-                  de
-                  negocios centrados en dinámicas de las economías emergentes.
-                  {% endif %}</h5>
-                <hr class="home-bar mobile-version">
-                <h5 class="white-color mobile-version text-center">
-                  {% if language.getId() == 'en' %}
-                  We are an organization that identifies and creates new opportunities in challenging contexts.
-                  {% elseif language.getId() == 'es' %}
-                  Somos una organización que identifica y genera nuevas
-                  oportunidades en contextos desafiantes.
-                  {% endif %}</h5>
-                </h5>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+	<div id="carouselHome" class="carousel slide">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img src="/themes/custom/gftheme/images/gf-back.png" alt="Global Foresight" class="img-fluid desktop-version"/>
+				<img src="/themes/custom/gftheme/images/gf-back-mobile.png" alt="Global Foresight" class="img-fluid mobile-version"/>
+				<div class="carousel-content">
+					<div class="col-sm-11 col-xl-4 offset-sm-1">
+						<div class="row align-items-center">
+							<div class="col-sm-4 col-xl-12 logo-section-1">
+								<img src="/themes/custom/gftheme/images/gf-logo.png" alt="Global Foresight" class="img-fluid"/>
+							</div>
+							<div class="col-sm-7 col-xl-12">
+								<h5 class="white-color desktop-version">
+									{% if language.getId() == 'en' %}
+										We are an organization that identifies and creates new opportunities in challenging contexts. This way, we contribute to the promotion of companies and the creation of new ones with business models focused on the dynamics of emerging economies.
+									{% elseif language.getId() == 'es' %}
+										Somos una organización que identifica y genera nuevas
+																																																																																																																																																																																				oportunidades en contextos
+																																																																																																																																																																																				desafiantes. Así, contribuimos a la promoción de empresas y generación de nuevas compañías, con
+																																																																																																																																																																																				modelos
+																																																																																																																																																																																				de
+																																																																																																																																																																																				negocios centrados en dinámicas de las economías emergentes.
+									{% endif %}
+								</h5>
+								<hr class="home-bar mobile-version">
+								<h5 class="white-color mobile-version text-center">
+									{% if language.getId() == 'en' %}
+										We are an organization that identifies and creates new opportunities in challenging contexts.
+									{% elseif language.getId() == 'es' %}
+										Somos una organización que identifica y genera nuevas
+																																																																																																																																																																																				oportunidades en contextos desafiantes.
+									{% endif %}
+								</h5>
+							</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div></div><div class="container-fluid mobile-padding-0">
+<div
+	class="wrapper mobile-padding-0">
+	{# {{ page.primary_menu }}
+																		{{ page.secondary_menu }}
+	
+																		{{ page.breadcrumb }}
+	
+																		{{ page.highlighted }}
+	
+																		{{ page.help }} #}
 
-<div class="container-fluid mobile-padding-0">
-  <div class="wrapper mobile-padding-0">
-    {# {{ page.primary_menu }}
-{{ page.secondary_menu }}
+	<main role="main">
 
-{{ page.breadcrumb }}
+		<!-- BANNER -->
 
-{{ page.highlighted }}
+		<!-- NEGOCIOS -->
 
-{{ page.help }} #}
+			<section class="section-wrapper" id="negocios"> <div class="negocios-container row">
+				<div class="element-of-5">
+					{% if language.getId() == 'en' %}
+						<a href="en/servicios#energia" class="negocio">
+						{% elseif language.getId() == 'es' %}
+							<a href="servicios#energia" class="negocio">
+							{% endif %}
+							<img src="/themes/custom/gftheme/images/img-energia.png" alt="Energia" class="img-fluid desktop-version"/>
+							<img src="/themes/custom/gftheme/images/img-energia-mobile.png" alt="Energia" class="img-fluid mobile-version"/>
+							<div class="negocio-content">
+								<img src="/themes/custom/gftheme/images/icon-energia.png" alt="Energia" class="img-fluid"/>
+								<h4>
+									{% if language.getId() == 'en' %}
+										Energy
+									{% elseif language.getId() == 'es' %}
+										Energía
+									{% endif %}
+								</h4>
+								<p class="desktop-version">
+									{% if language.getId() == 'en' %}
+										We conduct a thorough follow-up of electric energy, a key component for the development and well-being of our societies.
+									{% elseif language.getId() == 'es' %}
+										Realizamos un seguimiento exhaustivo de la energía eléctrica, un componente clave para el desarrollo y
+																																																																																																																																																																										bienestar de nuestras sociedades.
+									{% endif %}
+								</p>
+							</div>
+						</a>
+					</div>
+					<div class="element-of-5">
+						{% if language.getId() == 'en' %}
+							<a href="en/servicios#agro" class="negocio">
+							{% elseif language.getId() == 'es' %}
+								<a href="servicios#agro" class="negocio">
+								{% endif %}
+								<img src="/themes/custom/gftheme/images/img-agro.png" alt="Agronegocio" class="img-fluid desktop-version"/>
+								<img src="/themes/custom/gftheme/images/img-agro-mobile.png" alt="Agronegocio" class="img-fluid mobile-version"/>
+								<div class="negocio-content">
+									<img src="/themes/custom/gftheme/images/icon-agro.png" alt="Agronegocios" class="img-fluid"/>
+									<h4>
+										{% if language.getId() == 'en' %}
+											Agribusinesses
+										{% elseif language.getId() == 'es' %}
+											Agronegocios
+										{% endif %}
+									</h4>
+									<p class="desktop-version">
+										{% if language.getId() == 'en' %}
+											We analyze perspectives of agriculture and its components: essential to economic growth and sustainable development.
+										{% elseif language.getId() == 'es' %}
+											Analizamos las perspectivas de la agricultura y sus componentes: fundamentales para el crecimiento
+																																																																																																																																																																																			económico y el desarrollo sostenible.
+										{% endif %}
+									</p>
+								</div>
+							</a>
+						</div>
+						<div class="element-of-5">
+							{% if language.getId() == 'en' %}
+								<a href="en/servicios#medio" class="negocio">
+								{% elseif language.getId() == 'es' %}
+									<a href="servicios#medio" class="negocio">
+									{% endif %}
+									<img src="/themes/custom/gftheme/images/img-medio.png" alt="Medio Ambiente" class="img-fluid desktop-version"/>
+									<img src="/themes/custom/gftheme/images/img-medio-mobile.png" alt="Medio Ambiente" class="img-fluid mobile-version"/>
+									<div class="negocio-content">
+										<img src="/themes/custom/gftheme/images/icon-medio.png" alt="Medio ambiente" class="img-fluid"/>
+										<h4>
+											{% if language.getId() == 'en' %}
+												Environment
+											{% elseif language.getId() == 'es' %}
+												Medio ambiente
+											{% endif %}
+										</h4>
+										<p class="desktop-version">
+											{% if language.getId() == 'en' %}
+												We collaborate with incentives to make the private and corporate sector reduce their emissions in an efficient and competitive way.
+											{% elseif language.getId() == 'es' %}
+												Colaboramos en el incentivo para que el sector privado y empresarial reduzca sus emisiones de manera
+																																																																																																																																																																																									eficiente y competitiva.
+											{% endif %}
+										</p>
+									</div>
+								</a>
+							</div>
+							<div class="element-of-5">
+								{% if language.getId() == 'en' %}
+									<a href="en/servicios#biotec" class="negocio">
+									{% elseif language.getId() == 'es' %}
+										<a href="servicios#biotec" class="negocio">
+										{% endif %}
+										<img src="/themes/custom/gftheme/images/img-biotec.png" alt="Biotecnologia" class="img-fluid desktop-version"/>
+										<img src="/themes/custom/gftheme/images/img-biotec-mobile.png" alt="Biotecnologia" class="img-fluid mobile-version"/>
+										<div class="negocio-content">
+											<img src="/themes/custom/gftheme/images/icon-bio.png" alt="Biotecnología" class="img-fluid"/>
+											<h4>
+												{% if language.getId() == 'en' %}
+													Biotechnology
+												{% elseif language.getId() == 'es' %}
+													Biotecnología
+												{% endif %}
+											</h4>
+											<p class="desktop-version">
+												{% if language.getId() == 'en' %}
+													We leverage investment opportunities in emerging countries, considering discoveries related to new products and markets.
+												{% elseif language.getId() == 'es' %}
+													Aprovechamos las oportunidades de inversión en los países emergentes, considerando descubrimientos
+																																																																																																																																																																																											relacionados a nuevos productos y mercados.
+												{% endif %}
+											</p>
+										</div>
+									</a>
+								</div>
+								<div class="element-of-5">
+									{% if language.getId() == 'en' %}
+										<a href="en/servicios#tics" class="negocio">
+										{% elseif language.getId() == 'es' %}
+											<a href="servicios#tics" class="negocio">
+											{% endif %}
+											<img src="/themes/custom/gftheme/images/img-tics.png" alt="TICS" class="img-fluid desktop-version"/>
+											<img src="/themes/custom/gftheme/images/img-tics-mobile.png" alt="TICS" class="img-fluid mobile-version"/>
+											<div class="negocio-content">
+												<img src="/themes/custom/gftheme/images/icon-tics.png" alt="TICS" class="img-fluid"/>
+												<h4>
+													{% if language.getId() == 'en' %}
+														TICS
+													{% elseif language.getId() == 'es' %}
+														TICS
+													{% endif %}
+												</h4>
+												<p class="desktop-version">
+													{% if language.getId() == 'en' %}
+														We adapt to the evolution and permanent development offered by Information and Communication Technology.
+													{% elseif language.getId() == 'es' %}
+														Nos adaptamos a la evolución y desarrollo permanente que ofrecen las Tecnologías de Información y
+																																																																																																																																																																																																Comunicación.
+													{% endif %}
+												</p>
+											</div>
+										</a>
+									</div>
+								</div>
+							</section>
 
-    <main role="main">
+							<!-- SERVICIOS -->
 
-      <!-- BANNER -->
+							<section class="section-wrapper" id="servicios">
+								<div class="servicios-container row align-items-center justify-content-center">
+									<div class="col-sm-12 text-center column-servicios consultoria-container">
+										<div class="rotate-inverse">
+											<h4 class="font-bold">
+												{% if language.getId() == 'en' %}
+													CONSULTING
+												{% elseif language.getId() == 'es' %}
+													CONSULTORÍA
+												{% endif %}
+											</h4>
+											<p class="text-left-expanded">
+												{% if language.getId() == 'en' %}
+													We evaluate operations and plans by different companies in order to facilitate them with a diagnosis that will allow them to project new business strategies.
+												{% elseif language.getId() == 'es' %}
+													Evaluamos las operaciones y planes de diversas empresas para facilitarles un diagnóstico que les permita
+																																																																																																																																																																														proyectar nuevas estrategias de negocios.
+												{% endif %}
+											</p>
+											<div class="expanded desktop-version">
+												<p class="text-left">
+													{% if language.getId() == 'en' %}
+														The process has four steps:
+													{% elseif language.getId() == 'es' %}
+														El proceso cuenta con cuatro pasos:
+													{% endif %}
+												</p>
+												<ol class="text-left">
+													{% if language.getId() == 'en' %}
+														<li>Feedback: company-client information</li>
+														<li>Diagnostics</li>
+														<li>Solutions: management of the environment and resource mobilization</li>
+														<li>Implementation</li>
+													{% elseif language.getId() == 'es' %}
+														<li>Feedback: información empresa-cliente</li>
+														<li>Diagnóstico</li>
+														<li>Soluciones: gestión del entorno y movilización de recursos</li>
+														<li>Implementación</li>
+													{% endif %}
+												</ol>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-12 text-center column-servicios hidden-element">
+										<div class="rotate-inverse">
+											<h4 class="font-bold">
+												{% if language.getId() == 'en' %}
+													FUNDRAISING
+												{% elseif language.getId() == 'es' %}
+													FUNDRAISING
+												{% endif %}
+											</h4>
+											<p>
+												{% if language.getId() == 'en' %}
+													We offer a business model focused on the dynamics of emerging economies.
+												{% elseif language.getId() == 'es' %}
+													Ofrecemos un modelo de negocio centrado en las dinámicas de las economías emergentes.
+												{% endif %}
+											</p>
+											<div class="expanded desktop-version">
+												{% if language.getId() == 'en' %}
+													<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In  -->
+													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="719.9px" height="234.5px" viewbox="0 0 719.9 234.5" style="enable-background:new 0 0 719.9 234.5;" xml:space="preserve">
+														<defs></defs>
+														<g>
+															<text transform="matrix(1 0 0 1 1.0967 47.8242)" class="st0 st1 st2">Strategy</text>
+															<text transform="matrix(1 0 0 1 209.0381 47.8242)" class="st0 st1 st2">Fundraising</text>
+															<text transform="matrix(1 0 0 1 401.7793 48.3242)" class="st0 st1 st2">Due diligence</text>
+															<text transform="matrix(1 0 0 1 614.8818 47.8242)" class="st0 st1 st2">Closing</text>
+															<g>
+																<line class="st3" x1="63.4" y1="5" x2="656.1" y2="5"/>
+																<circle class="st4" cx="64.4" cy="5" r="5"/>
+																<circle class="st4" cx="653.4" cy="5.5" r="5"/>
+																<circle class="st4" cx="478.9" cy="5.5" r="5"/>
+																<circle class="st4" cx="271.4" cy="5" r="5"/>
+															</g>
+															<g>
+																<rect y="62.8" class="st5" width="170.9" height="169.7"/>
+																<text transform="matrix(1 0 0 1 0 74.8086)">
+																	<tspan x="0" y="0" class="st6 st7 st8">• Development of a
+																	</tspan>
+																	<tspan x="0" y="16.8" class="st6 st7 st8">fundraising strategy.</tspan>
+																	<tspan x="0" y="37.6" class="st6 st7 st8">• Agreement on a shortlist
+																	</tspan>
+																	<tspan x="0" y="54.4" class="st6 st7 st8">of potential funds.</tspan>
+																	<tspan x="0" y="75.2" class="st6 st7 st8">• Development of a blind
+																	</tspan>
+																	<tspan x="0" y="90" class="st6 st7 st8">profile for the company.</tspan>
+																	<tspan x="0" y="110.8" class="st6 st7 st8">• Setting up the
+																	</tspan>
+																	<tspan x="0" y="125.6" class="st6 st7 st8">presentation materials
+																	</tspan>
+																	<tspan x="0" y="142.4" class="st6 st7 st8">for the funds.</tspan>
+																</text>
+															</g>
+															<g>
+																<rect x="209.3" y="64.8" class="st5" width="169.6" height="169.7"/>
+																<text transform="matrix(1 0 0 1 209.3428 76.8086)">
+																	<tspan x="0" y="0" class="st6 st7 st8">• Contact target
+																	</tspan>
+																	<tspan x="0" y="16.8" class="st6 st7 st8">funds.</tspan>
+																	<tspan x="0" y="37.6" class="st6 st7 st8">• Confidentiality
+																	</tspan>
+																	<tspan x="0" y="54.4" class="st6 st7 st8">agreements.</tspan>
+																	<tspan x="0" y="75.2" class="st6 st7 st8">• Presentation of
+																	</tspan>
+																	<tspan x="0" y="92" class="st6 st7 st8">investment opportunities.</tspan>
+																	<tspan x="0" y="112.8" class="st6 st7 st8">• Fundraising project
+																	</tspan>
+																	<tspan x="0" y="129.6" class="st6 st7 st8">management.</tspan>
+																</text>
+															</g>
+															<g>
+																<rect x="428.1" y="68.3" class="st5" width="119.9" height="119.2"/>
+																<text transform="matrix(1 0 0 1 428.0518 80.3086)">
+																	<tspan x="0" y="0" class="st6 st7 st8">• Financial.</tspan>
+																	<tspan x="0" y="20.8" class="st6 st7 st8">• Legal.</tspan>
+																	<tspan x="0" y="41.6" class="st6 st7 st8">• Reputational.</tspan>
+																	<tspan x="0" y="62.4" class="st6 st7 st8">• Strategic.</tspan>
+																	<tspan x="0" y="83.2" class="st6 st7 st8">• Environment.</tspan>
+																</text>
+															</g>
+															<g>
+																<rect x="591" y="67.8" class="st5" width="128.9" height="124.7"/>
+																<text transform="matrix(1 0 0 1 590.9932 79.8086)">
+																	<tspan x="0" y="0" class="st6 st7 st8">• Binding letter
+																	</tspan>
+																	<tspan x="0" y="16.8" class="st6 st7 st8">of intention.</tspan>
+																	<tspan x="0" y="37.6" class="st6 st7 st8">• Contract
+																	</tspan>
+																	<tspan x="0" y="52.4" class="st6 st7 st8">negotiation.</tspan>
+																	<tspan x="0" y="73.2" class="st6 st7 st8">• Signing.</tspan>
+																</text>
+															</g>
+														</g>
+													</svg>
+												{% elseif language.getId() == 'es' %}
+													<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In  -->
+													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="719.9px" height="234.5px" viewbox="0 0 719.9 234.5" style="enable-background:new 0 0 719.9 234.5;" xml:space="preserve">
+														<defs></defs>
+														<g>
+															<text transform="matrix(1 0 0 1 1.0967 47.8242)" class="st0 st1 st2">Estrategia</text>
+															<text transform="matrix(1 0 0 1 209.0381 47.8242)" class="st0 st1 st2">Fundraising</text>
+															<text transform="matrix(1 0 0 1 401.7793 48.3242)" class="st0 st1 st2">Due diligence</text>
+															<text transform="matrix(1 0 0 1 614.8818 47.8242)" class="st0 st1 st2">Cierre</text>
+															<g>
+																<line class="st3" x1="63.4" y1="5" x2="656.1" y2="5"/>
+																<circle class="st4" cx="64.4" cy="5" r="5"/>
+																<circle class="st4" cx="653.4" cy="5.5" r="5"/>
+																<circle class="st4" cx="478.9" cy="5.5" r="5"/>
+																<circle class="st4" cx="271.4" cy="5" r="5"/>
+															</g>
+															<g>
+																<rect y="62.8" class="st5" width="170.9" height="169.7"/>
+																<text transform="matrix(1 0 0 1 0 74.8086)">
+																	<tspan x="0" y="0" class="st6 st7 st8">• Desarrollo de una
+																	</tspan>
+																	<tspan x="0" y="16.8" class="st6 st7 st8">estrategia de fundraising.</tspan>
+																	<tspan x="0" y="37.6" class="st6 st7 st8">• Acuerdo sobre shortlist
+																	</tspan>
+																	<tspan x="0" y="54.4" class="st6 st7 st8">de potenciales fondos.</tspan>
+																	<tspan x="0" y="75.2" class="st6 st7 st8">• Desarrollo de un blind
+																	</tspan>
+																	<tspan x="0" y="90" class="st6 st7 st8">profile para la compañía.</tspan>
+																	<tspan x="0" y="110.8" class="st6 st7 st8">• Preparación de material
+																	</tspan>
+																	<tspan x="0" y="125.6" class="st6 st7 st8">de presentación para
+																	</tspan>
+																	<tspan x="0" y="142.4" class="st6 st7 st8">fondos.</tspan>
+																</text>
+															</g>
+															<g>
+																<rect x="209.3" y="64.8" class="st5" width="169.6" height="169.7"/>
+																<text transform="matrix(1 0 0 1 209.3428 76.8086)">
+																	<tspan x="0" y="0" class="st6 st7 st8">• Contacto de fondos
+																	</tspan>
+																	<tspan x="0" y="16.8" class="st6 st7 st8">objetivo.</tspan>
+																	<tspan x="0" y="37.6" class="st6 st7 st8">• Acuerdos de
+																	</tspan>
+																	<tspan x="0" y="54.4" class="st6 st7 st8">confidencialidad.</tspan>
+																	<tspan x="0" y="75.2" class="st6 st7 st8">• Presentación de
+																	</tspan>
+																	<tspan x="0" y="92" class="st6 st7 st8">oportunidad de inversión.</tspan>
+																	<tspan x="0" y="112.8" class="st6 st7 st8">• Gestión de proyecto de
+																	</tspan>
+																	<tspan x="0" y="129.6" class="st6 st7 st8">fundraising.</tspan>
+																</text>
+															</g>
+															<g>
+																<rect x="428.1" y="68.3" class="st5" width="119.9" height="119.2"/>
+																<text transform="matrix(1 0 0 1 428.0518 80.3086)">
+																	<tspan x="0" y="0" class="st6 st7 st8">• Financiero.</tspan>
+																	<tspan x="0" y="20.8" class="st6 st7 st8">• Legal.</tspan>
+																	<tspan x="0" y="41.6" class="st6 st7 st8">• Reputacional.</tspan>
+																	<tspan x="0" y="62.4" class="st6 st7 st8">• Estratégico.</tspan>
+																	<tspan x="0" y="83.2" class="st6 st7 st8">• Entorno.</tspan>
+																</text>
+															</g>
+															<g>
+																<rect x="591" y="67.8" class="st5" width="128.9" height="124.7"/>
+																<text transform="matrix(1 0 0 1 590.9932 79.8086)">
+																	<tspan x="0" y="0" class="st6 st7 st8">• Carta de intención
+																	</tspan>
+																	<tspan x="0" y="16.8" class="st6 st7 st8">vinculante.</tspan>
+																	<tspan x="0" y="37.6" class="st6 st7 st8">• Negociación
+																	</tspan>
+																	<tspan x="0" y="52.4" class="st6 st7 st8">de contrato.</tspan>
+																	<tspan x="0" y="73.2" class="st6 st7 st8">• Firma.</tspan>
+																</text>
+															</g>
+														</g>
+													</svg>
+												{% endif %}
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-12 text-center column-servicios hidden-element">
+										<div class="rotate-inverse">
+											<h4 class="font-bold">
+												{% if language.getId() == 'en' %}
+													SUPPORT
+												{% elseif language.getId() == 'es' %}
+													SOPORTE
+												{% endif %}
+											</h4>
+											<p class="text-left-expanded">
+												{% if language.getId() == 'en' %}
+													Through a renovated and customized design we promote our clients’ activities in local and international markets.
+												{% elseif language.getId() == 'es' %}
+													Impulsamos con un diseño renovado y personalizado las actividades de nuestros clientes en mercados
+																																																																																																																																																																														locales
+																																																																																																																																																																														e internacionales.
+												{% endif %}
+											</p>
+											<div class="expanded desktop-version">
+												<p class="text-left">
+													{% if language.getId() == 'en' %}
+														Our global vision consists of:
+													{% elseif language.getId() == 'es' %}
+														Nuestra visión global consiste en:
+													{% endif %}
+												</p>
+												{% if language.getId() == 'en' %}
+													<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In  -->
+													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="704.8px" height="109px" viewbox="0 0 704.8 109" style="enable-background:new 0 0 704.8 109;" xml:space="preserve">
+														<defs></defs>
+														<g>
+															<text transform="matrix(1 0 0 1 19.3018 10.6064)">
+																<tspan x="0" y="0" class="st0-graph2 st1-graph2 st2-graph2">Prospecting</tspan>
+																<tspan x="0" y="14.8" class="st0-graph2 st1-graph2 st2-graph2">nnew markets</tspan>
+															</text>
+															<text transform="matrix(1 0 0 1 159.4512 69.417)">
+																<tspan x="0" y="0" class="st0-graph2 st1-graph2 st2-graph2">Identifying potential
+																</tspan>
+																<tspan x="0" y="14.8" class="st0-graph2 st1-graph2 st2-graph2">clients in every
+																</tspan>
+																<tspan x="0" y="29.6" class="st0-graph2 st1-graph2 st2-graph2">market place</tspan>
+															</text>
+															<text transform="matrix(1 0 0 1 299.9043 10.6064)">
+																<tspan x="0" y="0" class="st0-graph2 st1-graph2 st2-graph2">Contact and confirmation
+																</tspan>
+																<tspan x="0" y="14.8" class="st0-graph2 st1-graph2 st2-graph2">of requirements</tspan>
+															</text>
+															<text transform="matrix(1 0 0 1 470.8633 71.4834)">
+																<tspan x="0" y="0" class="st0-graph2 st1-graph2 st2-graph2">Sample
+																</tspan>
+																<tspan x="0" y="14.8" class="st0-graph2 st1-graph2 st2-graph2">sending</tspan>
+															</text>
+															<text transform="matrix(1 0 0 1 559.4669 25.4307)" class="st0-graph2 st1-graph2 st2-graph2">Negotiation</text>
+															<text transform="matrix(1 0 0 1 658.1553 57.2734)" class="st0-graph2 st1-graph2 st2-graph2">Closing</text>
+															<path class="st3-graph2" d="M0,34h136v74.5h146.3V34h165.4v60.2c2.1,0,95,0,95,0V34h102.5v30.6h59.5"/>
+														</g>
+													</svg>
+												{% elseif language.getId() == 'es' %}
+													<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In  -->
+													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="704.8px" height="109px" viewbox="0 0 704.8 109" style="enable-background:new 0 0 704.8 109;" xml:space="preserve">
+														<defs></defs>
+														<g>
+															<text transform="matrix(1 0 0 1 19.3018 10.6064)">
+																<tspan x="0" y="0" class="st0-graph2 st1-graph2 st2-graph2">Prospección de</tspan>
+																<tspan x="0" y="14.8" class="st0-graph2 st1-graph2 st2-graph2">nuevos mercados</tspan>
+															</text>
+															<text transform="matrix(1 0 0 1 159.4512 69.417)">
+																<tspan x="0" y="0" class="st0-graph2 st1-graph2 st2-graph2">Identificacion de
+																</tspan>
+																<tspan x="0" y="14.8" class="st0-graph2 st1-graph2 st2-graph2">potenciales
+																</tspan>
+																<tspan x="0" y="29.6" class="st0-graph2 st1-graph2 st2-graph2">clientes por plaza</tspan>
+															</text>
+															<text transform="matrix(1 0 0 1 299.9043 10.6064)">
+																<tspan x="0" y="0" class="st0-graph2 st1-graph2 st2-graph2">Contacto y confirmación
+																</tspan>
+																<tspan x="0" y="14.8" class="st0-graph2 st1-graph2 st2-graph2">de requerimientos</tspan>
+															</text>
+															<text transform="matrix(1 0 0 1 470.8633 71.4834)">
+																<tspan x="0" y="0" class="st0-graph2 st1-graph2 st2-graph2">Envío
+																</tspan>
+																<tspan x="0" y="14.8" class="st0-graph2 st1-graph2 st2-graph2">muestras</tspan>
+															</text>
+															<text transform="matrix(1 0 0 1 559.4669 25.4307)" class="st0-graph2 st1-graph2 st2-graph2">Negociación</text>
+															<text transform="matrix(1 0 0 1 658.1553 57.2734)" class="st0-graph2 st1-graph2 st2-graph2">Cierre</text>
+															<path class="st3-graph2" d="M0,34h136v74.5h146.3V34h165.4v60.2c2.1,0,95,0,95,0V34h102.5v30.6h59.5"/>
+														</g>
+													</svg>
+												{% endif %}
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
 
-      <!-- NEGOCIOS -->
+							<!-- INFORMES -->
 
-      <section class="section-wrapper" id="negocios">
-        <div class="negocios-container row">
-          <div class="element-of-5">
-            <a href="servicios#energia" class="negocio">
-              <img src="./themes/custom/gftheme/images/img-energia.png" alt="Energia"
-                class="img-fluid desktop-version" />
-              <img src="./themes/custom/gftheme/images/img-energia-mobile.png" alt="Energia"
-                class="img-fluid mobile-version" />
-              <div class="negocio-content">
-                <img src="./themes/custom/gftheme/images/icon-energia.png" alt="Energia" class="img-fluid" />
-                <h4>{% if language.getId() == 'en' %}
-                  Energy
-                  {% elseif language.getId() == 'es' %}
-                  Energía
-                  {% endif %}</h4>
-                <p class="desktop-version">
-                  {% if language.getId() == 'en' %}
-                  We conduct a thorough follow-up of electric energy, a key component for the development and well-being
-                  of our societies.
-                  {% elseif language.getId() == 'es' %}
-                  Realizamos un seguimiento exhaustivo de la energía eléctrica, un componente clave para el desarrollo y
-                  bienestar de nuestras sociedades.
-                  {% endif %}
-                </p>
-              </div>
-            </a>
-          </div>
-          <div class="element-of-5">
-            <a href="servicios#agro" class="negocio">
-              <img src="./themes/custom/gftheme/images/img-agro.png" alt="Agronegocio"
-                class="img-fluid desktop-version" />
-              <img src="./themes/custom/gftheme/images/img-agro-mobile.png" alt="Agronegocio"
-                class="img-fluid mobile-version" />
-              <div class="negocio-content">
-                <img src="./themes/custom/gftheme/images/icon-agro.png" alt="Agronegocios" class="img-fluid" />
-                <h4>{% if language.getId() == 'en' %}
-                  Agribusinesses
-                  {% elseif language.getId() == 'es' %}
-                  Agronegocios
-                  {% endif %}</h4>
-                <p class="desktop-version">
-                  {% if language.getId() == 'en' %}
-                  We analyze perspectives of agriculture and its components: essential to economic growth and
-                  sustainable development.
-                  {% elseif language.getId() == 'es' %}
-                  Analizamos las perspectivas de la agricultura y sus componentes: fundamentales para el crecimiento
-                  económico y el desarrollo sostenible.
-                  {% endif %}
-                </p>
-              </div>
-            </a>
-          </div>
-          <div class="element-of-5">
-            <a href="servicios#medio" class="negocio">
-              <img src="./themes/custom/gftheme/images/img-medio.png" alt="Medio Ambiente"
-                class="img-fluid desktop-version" />
-              <img src="./themes/custom/gftheme/images/img-medio-mobile.png" alt="Medio Ambiente"
-                class="img-fluid mobile-version" />
-              <div class="negocio-content">
-                <img src="./themes/custom/gftheme/images/icon-medio.png" alt="Medio ambiente" class="img-fluid" />
-                <h4>{% if language.getId() == 'en' %}
-                  Environment
-                  {% elseif language.getId() == 'es' %}
-                  Medio ambiente
-                  {% endif %}</h4>
-                <p class="desktop-version">
-                  {% if language.getId() == 'en' %}
-                  We collaborate with incentives to make the private and corporate sector reduce their emissions in an
-                  efficient and competitive way.
-                  {% elseif language.getId() == 'es' %}
-                  Colaboramos en el incentivo para que el sector privado y empresarial reduzca sus emisiones de manera
-                  eficiente y competitiva.
-                  {% endif %}
-                </p>
-              </div>
-            </a>
-          </div>
-          <div class="element-of-5">
-            <a href="servicios#biotec" class="negocio">
-              <img src="./themes/custom/gftheme/images/img-biotec.png" alt="Biotecnologia"
-                class="img-fluid desktop-version" />
-              <img src="./themes/custom/gftheme/images/img-biotec-mobile.png" alt="Biotecnologia"
-                class="img-fluid mobile-version" />
-              <div class="negocio-content">
-                <img src="./themes/custom/gftheme/images/icon-bio.png" alt="Biotecnología" class="img-fluid" />
-                <h4>{% if language.getId() == 'en' %}
-                  Biotechnology
-                  {% elseif language.getId() == 'es' %}
-                  Biotecnología
-                  {% endif %}</h4>
-                <p class="desktop-version">
-                  {% if language.getId() == 'en' %}
-                  We leverage investment opportunities in emerging countries, considering discoveries related to new
-                  products and markets.
-                  {% elseif language.getId() == 'es' %}
-                  Aprovechamos las oportunidades de inversión en los países emergentes, considerando descubrimientos
-                  relacionados a nuevos productos y mercados.
-                  {% endif %}
-                </p>
-              </div>
-            </a>
-          </div>
-          <div class="element-of-5">
-            <a href="servicios#tics" class="negocio">
-              <img src="./themes/custom/gftheme/images/img-tics.png" alt="TICS" class="img-fluid desktop-version" />
-              <img src="./themes/custom/gftheme/images/img-tics-mobile.png" alt="TICS"
-                class="img-fluid mobile-version" />
-              <div class="negocio-content">
-                <img src="./themes/custom/gftheme/images/icon-tics.png" alt="TICS" class="img-fluid" />
-                <h4>{% if language.getId() == 'en' %}
-                  TICS
-                  {% elseif language.getId() == 'es' %}
-                  TICS
-                  {% endif %}</h4>
-                <p class="desktop-version">
-                  {% if language.getId() == 'en' %}
-                  We adapt to the evolution and permanent development offered by Information and Communication
-                  Technology.
-                  {% elseif language.getId() == 'es' %}
-                  Nos adaptamos a la evolución y desarrollo permanente que ofrecen las Tecnologías de Información y
-                  Comunicación.
-                  {% endif %}
-                </p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
+							<section class="section-wrapper" id="informes">
+								<div class="informes-container row align-items-center justify-content-center desktop-version">
+									<div class="col-lg-3">
+										<div class="informes-element-container">
+											<div class="informes-title align-items-end">
+												<img src="/themes/custom/gftheme/images/icon-yellow-agro.png" alt="Agronegocios" class="img-fluid"/>
+												<h4 class="font-bold">
+													{% if language.getId() == 'en' %}
+														Agribusinesses
+													{% elseif language.getId() == 'es' %}
+														Agronegocios
+													{% endif %}
+												</h4>
+											</div>
+											<div class="blue-container align-items-center" data-toggle="modal" data-target="#exampleModal-227">
+												{% if language.getId() == 'en' %}
+													See Reports
+												{% elseif language.getId() == 'es' %}
+													Ver Informes
+												{% endif %}
+												<img src="/themes/custom/gftheme/images/icon-yellow-plus.png" alt="Agronegocios" class="img-fluid"/>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-3">
+										<div class="informes-element-container">
+											<div class="informes-title align-items-end">
+												<img src="/themes/custom/gftheme/images/icon-yellow-mercado.png" alt="Agronegocios" class="img-fluid"/>
+												<h4 class="font-bold">
+													{% if language.getId() == 'en' %}
+														Carbon Market
+													{% elseif language.getId() == 'es' %}
+														Mercado<br/>
+														de carbono
+													{% endif %}
+												</h4>
+											</div>
+											<div class="blue-container align-items-center" data-toggle="modal" data-target="#exampleModal-230">
+												{% if language.getId() == 'en' %}
+													See Reports
+												{% elseif language.getId() == 'es' %}
+													Ver Informes
+												{% endif %}
+												<img src="/themes/custom/gftheme/images/icon-yellow-plus.png" alt="Agronegocios" class="img-fluid"/>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-3">
+										<div class="informes-element-container">
 
-      <!-- SERVICIOS -->
+											<div class="informes-title align-items-end">
+												<img src="/themes/custom/gftheme/images/icon-yellow-bio.png" alt="Agronegocios" class="img-fluid"/>
+												<h4 class="font-bold">
+													{% if language.getId() == 'en' %}
+														Biotechnology
+													{% elseif language.getId() == 'es' %}
+														Biotecnología
+													{% endif %}
+												</h4>
+											</div>
+											<div class="blue-container align-items-center" data-toggle="modal" data-target="#exampleModal-234">
+												{% if language.getId() == 'en' %}
+													See Reports
+												{% elseif language.getId() == 'es' %}
+													Ver Informes
+												{% endif %}
+												<img src="/themes/custom/gftheme/images/icon-yellow-plus.png" alt="Agronegocios" class="img-fluid"/>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- row -->
+								<div class="informes-container row align-items-center justify-content-center desktop-version">
+									<div class="col-lg-3">
+										<div class="informes-element-container">
+											<div class="informes-title align-items-end">
+												<img src="/themes/custom/gftheme/images/icon-yellow-energia.png" alt="Agronegocios" class="img-fluid"/>
+												<h4 class="font-bold">
+													{% if language.getId() == 'en' %}
+														Renewable Energies
+													{% elseif language.getId() == 'es' %}
+														Energías
+														<br/>
+														renovables
+													{% endif %}
+												</h4>
+											</div>
 
-      <section class="section-wrapper" id="servicios">
-        <div class="servicios-container row align-items-center justify-content-center">
-          <div class="col-sm-12 text-center column-servicios consultoria-container">
-            <div class="rotate-inverse">
-              <h4 class="font-bold">
-                {% if language.getId() == 'en' %}
-                CONSULTING
-                {% elseif language.getId() == 'es' %}
-                CONSULTORÍA
-                {% endif %}
-              </h4>
-              <p class="text-left-expanded">
-                {% if language.getId() == 'en' %}
-                We evaluate operations and plans by different companies in order to facilitate them with a diagnosis
-                that will allow them to project new business strategies.
-                {% elseif language.getId() == 'es' %}
-                Evaluamos las operaciones y planes de diversas empresas para facilitarles un diagnóstico que les permita
-                proyectar nuevas estrategias de negocios.
-                {% endif %}
-              </p>
-              <div class="expanded desktop-version">
-                <p class="text-left">
-                  {% if language.getId() == 'en' %}
-                  The process has four steps:
-                  {% elseif language.getId() == 'es' %}
-                  El proceso cuenta con cuatro pasos:
-                  {% endif %}</p>
-                <ol class="text-left">
-                  {% if language.getId() == 'en' %}
-                  <li>Feedback: company-client information</li>
-                  <li>Diagnostics</li>
-                  <li>Solutions: management of the environment and resource mobilization</li>
-                  <li>Implementation</li>
-                  {% elseif language.getId() == 'es' %}
-                  <li>Feedback: información empresa-cliente</li>
-                  <li>Diagnóstico</li>
-                  <li>Soluciones: gestión del entorno y movilización de recursos</li>
-                  <li>Implementación</li>
-                  {% endif %}
-                </ol>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-12 text-center column-servicios hidden-element">
-            <div class="rotate-inverse">
-              <h4 class="font-bold">
-                {% if language.getId() == 'en' %}
-                FUNDRAISING
-                {% elseif language.getId() == 'es' %}
-                FUNDRAISING
-                {% endif %}
-              </h4>
-              <p>{% if language.getId() == 'en' %}
-                We offer a business model focused on the dynamics of emerging economies.
-                {% elseif language.getId() == 'es' %}
-                Ofrecemos un modelo de negocio centrado en las dinámicas de las economías emergentes.
-                {% endif %}</p>
-              <div class="expanded desktop-version">
-                <!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In  -->
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                  xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="719.9px"
-                  height="234.5px" viewBox="0 0 719.9 234.5" style="enable-background:new 0 0 719.9 234.5;"
-                  xml:space="preserve">
-                  <defs>
-                  </defs>
-                  <g>
-                    <text transform="matrix(1 0 0 1 1.0967 47.8242)" class="st0 st1 st2">Estrategia</text>
-                    <text transform="matrix(1 0 0 1 209.0381 47.8242)" class="st0 st1 st2">Fundraising</text>
-                    <text transform="matrix(1 0 0 1 401.7793 48.3242)" class="st0 st1 st2">Due diligence</text>
-                    <text transform="matrix(1 0 0 1 614.8818 47.8242)" class="st0 st1 st2">Cierre</text>
-                    <g>
-                      <line class="st3" x1="63.4" y1="5" x2="656.1" y2="5" />
-                      <circle class="st4" cx="64.4" cy="5" r="5" />
-                      <circle class="st4" cx="653.4" cy="5.5" r="5" />
-                      <circle class="st4" cx="478.9" cy="5.5" r="5" />
-                      <circle class="st4" cx="271.4" cy="5" r="5" />
-                    </g>
-                    <g>
-                      <rect y="62.8" class="st5" width="170.9" height="169.7" />
-                      <text transform="matrix(1 0 0 1 0 74.8086)">
-                        <tspan x="0" y="0" class="st6 st7 st8">• Desarrollo de una </tspan>
-                        <tspan x="0" y="16.8" class="st6 st7 st8">estrategia de fundraising.</tspan>
-                        <tspan x="0" y="37.6" class="st6 st7 st8">• Acuerdo sobre shortlist </tspan>
-                        <tspan x="0" y="54.4" class="st6 st7 st8">de potenciales fondos.</tspan>
-                        <tspan x="0" y="75.2" class="st6 st7 st8">• Desarrollo de un blind </tspan>
-                        <tspan x="0" y="90" class="st6 st7 st8">profile para la compañía.</tspan>
-                        <tspan x="0" y="110.8" class="st6 st7 st8">• Preparación de material </tspan>
-                        <tspan x="0" y="125.6" class="st6 st7 st8">de presentación para </tspan>
-                        <tspan x="0" y="142.4" class="st6 st7 st8">fondos.</tspan>
-                      </text>
-                    </g>
-                    <g>
-                      <rect x="209.3" y="64.8" class="st5" width="169.6" height="169.7" />
-                      <text transform="matrix(1 0 0 1 209.3428 76.8086)">
-                        <tspan x="0" y="0" class="st6 st7 st8">• Contacto de fondos </tspan>
-                        <tspan x="0" y="16.8" class="st6 st7 st8">objetivo.</tspan>
-                        <tspan x="0" y="37.6" class="st6 st7 st8">• Acuerdos de </tspan>
-                        <tspan x="0" y="54.4" class="st6 st7 st8">confidencialidad.</tspan>
-                        <tspan x="0" y="75.2" class="st6 st7 st8">• Presentación de </tspan>
-                        <tspan x="0" y="92" class="st6 st7 st8">oportunidad de inversión.</tspan>
-                        <tspan x="0" y="112.8" class="st6 st7 st8">• Gestión de proyecto de </tspan>
-                        <tspan x="0" y="129.6" class="st6 st7 st8">fundraising.</tspan>
-                      </text>
-                    </g>
-                    <g>
-                      <rect x="428.1" y="68.3" class="st5" width="119.9" height="119.2" />
-                      <text transform="matrix(1 0 0 1 428.0518 80.3086)">
-                        <tspan x="0" y="0" class="st6 st7 st8">• Financiero.</tspan>
-                        <tspan x="0" y="20.8" class="st6 st7 st8">• Legal.</tspan>
-                        <tspan x="0" y="41.6" class="st6 st7 st8">• Reputacional.</tspan>
-                        <tspan x="0" y="62.4" class="st6 st7 st8">• Estratégico.</tspan>
-                        <tspan x="0" y="83.2" class="st6 st7 st8">• Entorno.</tspan>
-                      </text>
-                    </g>
-                    <g>
-                      <rect x="591" y="67.8" class="st5" width="128.9" height="124.7" />
-                      <text transform="matrix(1 0 0 1 590.9932 79.8086)">
-                        <tspan x="0" y="0" class="st6 st7 st8">• Carta de intención </tspan>
-                        <tspan x="0" y="16.8" class="st6 st7 st8">vinculante.</tspan>
-                        <tspan x="0" y="37.6" class="st6 st7 st8">• Negociación </tspan>
-                        <tspan x="0" y="52.4" class="st6 st7 st8">de contrato.</tspan>
-                        <tspan x="0" y="73.2" class="st6 st7 st8">• Firma.</tspan>
-                      </text>
-                    </g>
-                  </g>
-                </svg>
+											<div class="blue-container align-items-center" data-toggle="modal" data-target="#exampleModal-235">
+												{% if language.getId() == 'en' %}
+													See Reports
+												{% elseif language.getId() == 'es' %}
+													Ver Informes
+												{% endif %}
+												<img src="/themes/custom/gftheme/images/icon-yellow-plus.png" alt="Agronegocios" class="img-fluid"/>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-3">
+										<div class="informes-element-container">
+											<div class="informes-title align-items-end">
+												<img src="/themes/custom/gftheme/images/icon-yellow-global.png" alt="Agronegocios" class="img-fluid"/>
+												<h4 class="font-bold">
+													{% if language.getId() == 'en' %}
+														Corporate Globalization
+													{% elseif language.getId() == 'es' %}
+														Globalización
+														<br/>
+														empresarial
+													{% endif %}
+												</h4>
+											</div>
+											<div class="blue-container align-items-center" data-toggle="modal" data-target="#exampleModal-237">
+												{% if language.getId() == 'en' %}
+													See Reports
+												{% elseif language.getId() == 'es' %}
+													Ver Informes
+												{% endif %}
+												<img src="/themes/custom/gftheme/images/icon-yellow-plus.png" alt="Agronegocios" class="img-fluid"/>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-3">
+										<div class="informes-element-container">
+											<div class="informes-title align-items-end">
+												<img src="/themes/custom/gftheme/images/icon-yellow-tics.png" alt="Agronegocios" class="img-fluid"/>
+												<h4 class="font-bold">
+													{% if language.getId() == 'en' %}
+														TICS
+													{% elseif language.getId() == 'es' %}
+														TICS
+													{% endif %}
+												</h4>
+											</div>
+											<div class="blue-container align-items-center" data-toggle="modal" data-target="#exampleModal-240">
+												{% if language.getId() == 'en' %}
+													See Reports
+												{% elseif language.getId() == 'es' %}
+													Ver Informes
+												{% endif %}
+												<img src="/themes/custom/gftheme/images/icon-yellow-plus.png" alt="Agronegocios" class="img-fluid"/>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="informes-container row align-items-center justify-content-center desktop-version">
+									<div class="newsletter-container col-lg-3">
+										<div class="informes-element-container">
+											{{ page.newsletter }}
+										</div>
+									</div>
+								</div>
+								<h3 class="mobile-version mobile-title padding-15">Informes.</h3>
+								<div class="mobile-version col-mobile-wrapper">
 
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-12 text-center column-servicios hidden-element">
-            <div class="rotate-inverse">
-              <h4 class="font-bold">
-                {% if language.getId() == 'en' %}
-                SUPPORT
-                {% elseif language.getId() == 'es' %}
-                SOPORTE
-                {% endif %}
-              </h4>
-              <p class="text-left-expanded">{% if language.getId() == 'en' %}
-                Through a renovated and customized design we promote our clients’ activities in local and international
-                markets.
-                {% elseif language.getId() == 'es' %}
-                Impulsamos con un diseño renovado y personalizado las actividades de nuestros clientes en mercados
-                locales
-                e internacionales.
-                {% endif %}</p>
-              <div class="expanded desktop-version">
-                <p class="text-left">{% if language.getId() == 'en' %}
-                  Our global vision consists of:
-                  {% elseif language.getId() == 'es' %}
-                  Nuestra visión global consiste en:
-                  {% endif %}</p>
-                <!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In  -->
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                  xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="704.8px"
-                  height="109px" viewBox="0 0 704.8 109" style="enable-background:new 0 0 704.8 109;"
-                  xml:space="preserve">
-                  <defs>
-                  </defs>
-                  <g>
-                    <text transform="matrix(1 0 0 1 19.3018 10.6064)">
-                      <tspan x="0" y="0" class="st0-graph2 st1-graph2 st2-graph2">Prospección de</tspan>
-                      <tspan x="0" y="14.8" class="st0-graph2 st1-graph2 st2-graph2">nuevos mercados</tspan>
-                    </text>
-                    <text transform="matrix(1 0 0 1 159.4512 69.417)">
-                      <tspan x="0" y="0" class="st0-graph2 st1-graph2 st2-graph2">Identificacion de </tspan>
-                      <tspan x="0" y="14.8" class="st0-graph2 st1-graph2 st2-graph2">potenciales </tspan>
-                      <tspan x="0" y="29.6" class="st0-graph2 st1-graph2 st2-graph2">clientes por plaza</tspan>
-                    </text>
-                    <text transform="matrix(1 0 0 1 299.9043 10.6064)">
-                      <tspan x="0" y="0" class="st0-graph2 st1-graph2 st2-graph2">Contacto y confirmación </tspan>
-                      <tspan x="0" y="14.8" class="st0-graph2 st1-graph2 st2-graph2">de requerimientos</tspan>
-                    </text>
-                    <text transform="matrix(1 0 0 1 470.8633 71.4834)">
-                      <tspan x="0" y="0" class="st0-graph2 st1-graph2 st2-graph2">Envío </tspan>
-                      <tspan x="0" y="14.8" class="st0-graph2 st1-graph2 st2-graph2">muestras</tspan>
-                    </text>
-                    <text transform="matrix(1 0 0 1 559.4669 25.4307)"
-                      class="st0-graph2 st1-graph2 st2-graph2">Negociación</text>
-                    <text transform="matrix(1 0 0 1 658.1553 57.2734)"
-                      class="st0-graph2 st1-graph2 st2-graph2">Cierre</text>
-                    <path class="st3-graph2"
-                      d="M0,34h136v74.5h146.3V34h165.4v60.2c2.1,0,95,0,95,0V34h102.5v30.6h59.5" />
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+									<div class="col-mobile-informes" data-toggle="modal" data-target="#exampleModal-227">
+										<div class="informes-element-container">
+											<div class="informes-title align-items-end">
+												<img src="/themes/custom/gftheme/images/icon-yellow-agro.png" alt="Agronegocios" class="img-fluid"/>
+												<h4 class="font-bold">
+													{% if language.getId() == 'en' %}
+														Agribusinesses
+													{% elseif language.getId() == 'es' %}
+														Agronegocios
+													{% endif %}
+												</h4>
+											</div>
 
-      <!-- INFORMES -->
+										</div>
+									</div>
+									<div class="col-mobile-informes" data-toggle="modal" data-target="#exampleModal-230">
+										<div class="informes-element-container">
+											<div class="informes-title align-items-end">
+												<img src="/themes/custom/gftheme/images/icon-yellow-mercado.png" alt="Agronegocios" class="img-fluid"/>
+												<h4 class="font-bold">
+													{% if language.getId() == 'en' %}
+														Carbon Market
+													{% elseif language.getId() == 'es' %}
+														Mercado<br/>
+														de carbono
+													{% endif %}
+												</h4>
+											</div>
+										</div>
+									</div>
+									<div class="col-mobile-informes">
+										<div class="informes-element-container" data-toggle="modal" data-target="#exampleModal-234">
 
-      <section class="section-wrapper" id="informes">
-        <div class="informes-container row align-items-center justify-content-center desktop-version">
-          <div class="col-lg-3">
-            <div class="informes-element-container">
-              <div class="informes-title align-items-end">
-                <img src="./themes/custom/gftheme/images/icon-yellow-agro.png" alt="Agronegocios" class="img-fluid" />
-                <h4 class="font-bold">
-                  {% if language.getId() == 'en' %}
-                  Agribusinesses
-                  {% elseif language.getId() == 'es' %}
-                  Agronegocios
-                  {% endif %}
-                </h4>
-              </div>
-              <div class="blue-container align-items-center" data-toggle="modal" data-target="#exampleModal-227">
-                {% if language.getId() == 'en' %}
-                See Reports
-                {% elseif language.getId() == 'es' %}
-                Ver Informes
-                {% endif %}
-                <img src="./themes/custom/gftheme/images/icon-yellow-plus.png" alt="Agronegocios" class="img-fluid" />
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="informes-element-container">
-              <div class="informes-title align-items-end">
-                <img src="./themes/custom/gftheme/images/icon-yellow-mercado.png" alt="Agronegocios"
-                  class="img-fluid" />
-                <h4 class="font-bold">
-                  {% if language.getId() == 'en' %}
-                  Carbon Market
-                  {% elseif language.getId() == 'es' %}
-                  Mercado<br />
-                  de carbono
-                  {% endif %}
-                </h4>
-              </div>
-              <div class="blue-container align-items-center" data-toggle="modal" data-target="#exampleModal-230">
-                {% if language.getId() == 'en' %}
-                See Reports
-                {% elseif language.getId() == 'es' %}
-                Ver Informes
-                {% endif %}
-                <img src="./themes/custom/gftheme/images/icon-yellow-plus.png" alt="Agronegocios" class="img-fluid" />
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="informes-element-container">
+											<div class="informes-title align-items-end">
+												<img src="/themes/custom/gftheme/images/icon-yellow-bio.png" alt="Agronegocios" class="img-fluid"/>
+												<h4 class="font-bold">
+													{% if language.getId() == 'en' %}
+														Biotechnology
+													{% elseif language.getId() == 'es' %}
+														Biotecnología
+													{% endif %}
+												</h4>
+											</div>
+										</div>
+									</div>
 
-              <div class="informes-title align-items-end">
-                <img src="./themes/custom/gftheme/images/icon-yellow-bio.png" alt="Agronegocios" class="img-fluid" />
-                <h4 class="font-bold">
-                  {% if language.getId() == 'en' %}
-                  Biotechnology
-                  {% elseif language.getId() == 'es' %}
-                  Biotecnología
-                  {% endif %}
-                </h4>
-              </div>
-              <div class="blue-container align-items-center" data-toggle="modal" data-target="#exampleModal-234">
-                {% if language.getId() == 'en' %}
-                See Reports
-                {% elseif language.getId() == 'es' %}
-                Ver Informes
-                {% endif %}
-                <img src="./themes/custom/gftheme/images/icon-yellow-plus.png" alt="Agronegocios" class="img-fluid" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- row -->
-        <div class="informes-container row align-items-center justify-content-center desktop-version">
-          <div class="col-lg-3">
-            <div class="informes-element-container">
-              <div class="informes-title align-items-end">
-                <img src="./themes/custom/gftheme/images/icon-yellow-energia.png" alt="Agronegocios"
-                  class="img-fluid" />
-                <h4 class="font-bold">
-                  {% if language.getId() == 'en' %}
-                  Renewable Energies
-                  {% elseif language.getId() == 'es' %}
-                  Energías <br />
-                  renovables
-                  {% endif %}
-                </h4>
-              </div>
+									<!-- row -->
 
-              <div class="blue-container align-items-center" data-toggle="modal" data-target="#exampleModal-235">
-                {% if language.getId() == 'en' %}
-                See Reports
-                {% elseif language.getId() == 'es' %}
-                Ver Informes
-                {% endif %}
-                <img src="./themes/custom/gftheme/images/icon-yellow-plus.png" alt="Agronegocios" class="img-fluid" />
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="informes-element-container">
-              <div class="informes-title align-items-end">
-                <img src="./themes/custom/gftheme/images/icon-yellow-global.png" alt="Agronegocios" class="img-fluid" />
-                <h4 class="font-bold">
-                  {% if language.getId() == 'en' %}
-                  Corporate Globalization
-                  {% elseif language.getId() == 'es' %}
-                  Globalización <br />
-                  empresarial
-                  {% endif %}
-                </h4>
-              </div>
-              <div class="blue-container align-items-center" data-toggle="modal" data-target="#exampleModal-237">
-                {% if language.getId() == 'en' %}
-                See Reports
-                {% elseif language.getId() == 'es' %}
-                Ver Informes
-                {% endif %}
-                <img src="./themes/custom/gftheme/images/icon-yellow-plus.png" alt="Agronegocios" class="img-fluid" />
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="informes-element-container">
-              <div class="informes-title align-items-end">
-                <img src="./themes/custom/gftheme/images/icon-yellow-tics.png" alt="Agronegocios" class="img-fluid" />
-                <h4 class="font-bold">
-                  {% if language.getId() == 'en' %}
-                  TICS
-                  {% elseif language.getId() == 'es' %}
-                  TICS
-                  {% endif %}
-                </h4>
-              </div>
-              <div class="blue-container align-items-center" data-toggle="modal" data-target="#exampleModal-240">
-                {% if language.getId() == 'en' %}
-                See Reports
-                {% elseif language.getId() == 'es' %}
-                Ver Informes
-                {% endif %}
-                <img src="./themes/custom/gftheme/images/icon-yellow-plus.png" alt="Agronegocios" class="img-fluid" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="informes-container row align-items-center justify-content-center desktop-version">
-          <div class="newsletter-container col-lg-3">
-            <div class="informes-element-container">
-              {{ page.newsletter }}
-            </div>
-          </div>
-        </div>
-        <h3 class="mobile-version mobile-title padding-15">Informes.</h3>
-        <div class="mobile-version col-mobile-wrapper">
-
-          <div class="col-mobile-informes" data-toggle="modal" data-target="#exampleModal-227">
-            <div class="informes-element-container">
-              <div class="informes-title align-items-end">
-                <img src="./themes/custom/gftheme/images/icon-yellow-agro.png" alt="Agronegocios" class="img-fluid" />
-                <h4 class="font-bold">
-                  {% if language.getId() == 'en' %}
-                  Agribusinesses
-                  {% elseif language.getId() == 'es' %}
-                  Agronegocios
-                  {% endif %}
-                </h4>
-              </div>
-
-            </div>
-          </div>
-          <div class="col-mobile-informes" data-toggle="modal" data-target="#exampleModal-230">
-            <div class="informes-element-container">
-              <div class="informes-title align-items-end">
-                <img src="./themes/custom/gftheme/images/icon-yellow-mercado.png" alt="Agronegocios"
-                  class="img-fluid" />
-                <h4 class="font-bold">
-                  {% if language.getId() == 'en' %}
-                  Carbon Market
-                  {% elseif language.getId() == 'es' %}
-                  Mercado<br />
-                  de carbono
-                  {% endif %}
-                </h4>
-              </div>
-            </div>
-          </div>
-          <div class="col-mobile-informes">
-            <div class="informes-element-container" data-toggle="modal" data-target="#exampleModal-234">
-
-              <div class="informes-title align-items-end">
-                <img src="./themes/custom/gftheme/images/icon-yellow-bio.png" alt="Agronegocios" class="img-fluid" />
-                <h4 class="font-bold">
-                  {% if language.getId() == 'en' %}
-                  Biotechnology
-                  {% elseif language.getId() == 'es' %}
-                  Biotecnología
-                  {% endif %}
-                </h4>
-              </div>
-            </div>
-          </div>
-
-          <!-- row -->
-
-          <div class="col-mobile-informes">
-            <div class="informes-element-container" data-toggle="modal" data-target="#exampleModal-235">
-              <div class="informes-title align-items-end">
-                <img src="./themes/custom/gftheme/images/icon-yellow-energia.png" alt="Agronegocios"
-                  class="img-fluid" />
-                <h4 class="font-bold">
-                  {% if language.getId() == 'en' %}
-                  Renewable Energies
-                  {% elseif language.getId() == 'es' %}
-                  Energías <br />
-                  renovables
-                  {% endif %}
-                </h4>
-              </div>
+									<div class="col-mobile-informes">
+										<div class="informes-element-container" data-toggle="modal" data-target="#exampleModal-235">
+											<div class="informes-title align-items-end">
+												<img src="/themes/custom/gftheme/images/icon-yellow-energia.png" alt="Agronegocios" class="img-fluid"/>
+												<h4 class="font-bold">
+													{% if language.getId() == 'en' %}
+														Renewable Energies
+													{% elseif language.getId() == 'es' %}
+														Energías
+														<br/>
+														renovables
+													{% endif %}
+												</h4>
+											</div>
 
 
-            </div>
-          </div>
-          <div class="col-mobile-informes">
-            <div class="informes-element-container" data-toggle="modal" data-target="#exampleModal-237">
-              <div class="informes-title align-items-end">
-                <img src="./themes/custom/gftheme/images/icon-yellow-global.png" alt="Agronegocios" class="img-fluid" />
-                <h4 class="font-bold">
-                  {% if language.getId() == 'en' %}
-                  Corporate Globalization
-                  {% elseif language.getId() == 'es' %}
-                  Globalización <br />
-                  empresarial
-                  {% endif %}
-                </h4>
-              </div>
+										</div>
+									</div>
+									<div class="col-mobile-informes">
+										<div class="informes-element-container" data-toggle="modal" data-target="#exampleModal-237">
+											<div class="informes-title align-items-end">
+												<img src="/themes/custom/gftheme/images/icon-yellow-global.png" alt="Agronegocios" class="img-fluid"/>
+												<h4 class="font-bold">
+													{% if language.getId() == 'en' %}
+														Corporate Globalization
+													{% elseif language.getId() == 'es' %}
+														Globalización
+														<br/>
+														empresarial
+													{% endif %}
+												</h4>
+											</div>
 
-            </div>
-          </div>
-          <div class="col-mobile-informes">
-            <div class="informes-element-container" data-toggle="modal" data-target="#exampleModal-240">
-              <div class="informes-title align-items-end">
-                <img src="./themes/custom/gftheme/images/icon-yellow-tics.png" alt="Agronegocios" class="img-fluid" />
-                <h4 class="font-bold">
-                  {% if language.getId() == 'en' %}
-                  TICS
-                  {% elseif language.getId() == 'es' %}
-                  TICS
-                  {% endif %}
-                </h4>
-              </div>
+										</div>
+									</div>
+									<div class="col-mobile-informes">
+										<div class="informes-element-container" data-toggle="modal" data-target="#exampleModal-240">
+											<div class="informes-title align-items-end">
+												<img src="/themes/custom/gftheme/images/icon-yellow-tics.png" alt="Agronegocios" class="img-fluid"/>
+												<h4 class="font-bold">
+													{% if language.getId() == 'en' %}
+														TICS
+													{% elseif language.getId() == 'es' %}
+														TICS
+													{% endif %}
+												</h4>
+											</div>
 
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      <!-- EVENTOS -->
-      <section class="section-wrapper" id="eventos">
-
-        {{ page.eventos }}
-      </section>
-
-      <!-- PRENSA -->
-      <section class="section-wrapper-last" id="prensa">
-        <h3 class="mobile-version mobile-title padding-15">{% if language.getId() == 'en' %}
-          News.
-          {% elseif language.getId() == 'es' %}
-          Prensa.
-          {% endif %}</h3>
-        {{ page.prensa }}
-      </section>
-
-      <!-- INFORMES -->
-      <section id="informes-modals">
-        {{ page.informes }}
-      </section>
+										</div>
+									</div>
+								</div>
+							</section>
 
 
-    </main>
+							<!-- EVENTOS -->
+							<section class="section-wrapper" id="eventos">
 
-  </div>
-</div>
+								{{ page.eventos }}
+							</section>
+
+							<!-- PRENSA -->
+							<section class="section-wrapper-last" id="prensa">
+								<h3 class="mobile-version mobile-title padding-15">
+									{% if language.getId() == 'en' %}
+										News.
+									{% elseif language.getId() == 'es' %}
+										Prensa.
+									{% endif %}
+								</h3>
+								{{ page.prensa }}
+							</section>
+
+							<!-- INFORMES -->
+							<section id="informes-modals">
+								{{ page.informes }}
+							</section>
 
 
-{% include directory ~ '/partials/footer.html.twig' %}
-{# /.layout-container #}
+						</main>
+
+					</div>
+				</div>
+				{% include directory ~ '/partials/footer.html.twig' %}
+				{# /.layout-container #}

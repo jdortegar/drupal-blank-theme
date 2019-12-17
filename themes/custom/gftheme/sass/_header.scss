@@ -5,6 +5,7 @@
   padding: 20px 0 30px;
   transition: background-color 0.5s ease;
   top: 0;
+
   &.blue,
   &.front,
   &.servicios-blue {
@@ -12,6 +13,7 @@
     transition: background-color 0.5s ease;
   }
 }
+
 #block-gftheme-branding {
   .logo {
     position: absolute;
@@ -21,12 +23,19 @@
     margin: 0 auto;
     width: 100px;
     top: 30px;
+
     img {
       max-width: 100%;
     }
   }
 }
+
 .main-navigation {
+
+  @media (max-width: 768px) {
+    display: inline-flex
+  }
+
   nav {
     width: 100%;
     padding: 0;
@@ -39,17 +48,21 @@
     ul {
       width: 100%;
       justify-content: space-between;
+
       li {
         width: 14%;
         text-align: center;
         margin: 0 10px;
+
         &:first-child {
           margin-left: 0;
         }
+
         &:last-child {
           margin-right: 0;
         }
       }
+
       li:nth-child(4) {
         opacity: 0;
       }
@@ -71,6 +84,7 @@
       }
     }
   }
+
   &.blue,
   &.front,
   &.servicios-blue {
@@ -78,6 +92,7 @@
       .navbar-toggler {
         color: #223362 !important;
       }
+
       ul {
         a {
           color: #223362 !important;
@@ -85,6 +100,7 @@
         }
       }
     }
+
     .line {
       background-color: #223362 !important;
     }
@@ -94,8 +110,29 @@
 .search-wrapper {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 
-  .input-group > div {
+  .languajes-selector {
+    margin-right: auto;
+    color: #fff;
+    margin-bottom: 1rem;
+
+    a {
+      color: #fff
+    }
+
+    &.blue,
+    &.front,
+    &.servicios-blue {
+      color: #223463;
+
+      a {
+        color: #223463;
+      }
+    }
+  }
+
+  .input-group>div {
     width: 100%;
   }
 
@@ -136,11 +173,18 @@
     #magnet-icon {
       cursor: pointer;
     }
+
+    .languajes-selector {
+      text-align: right;
+      margin-bottom: 0.5rem;
+    }
+
     .social-network-container {
       display: flex;
       justify-content: space-between;
       list-style: none;
       padding: 0;
+
       .header-icon {
         fill: #f2c453;
       }
@@ -150,6 +194,7 @@
         margin-left: 5px;
       }
     }
+
     &.blue,
     &.front,
     &.servicios-blue {
@@ -168,9 +213,11 @@
   color: #fff;
   list-style: none;
   width: 100%;
+
   li {
     margin-left: 10px;
   }
+
   a {
     color: #fff;
   }

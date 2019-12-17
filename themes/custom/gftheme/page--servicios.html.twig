@@ -1,174 +1,376 @@
 {% include directory ~ '/partials/header.html.twig'%}
 
 <div class="container-fluid mobile-padding-0">
-  <div class="wrapper mobile-padding-0">
+	<div class="wrapper mobile-padding-0">
 
-    <main role="main">
+		<main role="main">
 
-      <section class="section-wrapper section-servicios-1 servicios-section " id="energia">
-        <div class="header">
-          <img src="./themes/custom/gftheme/images/icon-energia.png" alt="Energia" class="img-fluid" />
-          <h4>Energía</h4>
-          <p >Buscamos soluciones sostenibles para proporcionar energía más competitiva.</p>
-        </div>
-        <div class="content row align-items-center justify-content-center">
-          <div class="circle-container justify-content-center">
-            <div class="circle">Analizamos<br>TENDENCIAS <br>DEL SECTOR <br>ENERGÉTICO</div>
-          </div>
-          <div class="circle-container">
-            <div class="circle">Focalizados en<br>
-              ENERGÍAS<br>
-              SUSTENTABLES</div>
-          </div>
-          <div class="circle-container">
-            <div class="circle">Buscamos<br>
-              ENERGÍAS<br>
-              RENOVABLES</div>
-          </div>
-          <div class="circle-container">
-            <div class="circle">A partir de<br>
-              FUENTES<br>
-              SEGURAS Y<br>
-              CONFIABLES</div>
-          </div>
-          <div class="circle-container">
-            <div class="circle">Proponemos<br>
-              PROYECTOS DE<br>
-              INVERSIÓN Y<br>
-              OPORTUNIDADES<br>
-              DE NEGOCIO</div>
-          </div>
-        </div>
-      </section>
-      <!-- Section -->
-      <section class="section-wrapper section-servicios-2 servicios-section scroll-animation" id="agro">
-        <div class="header">
-          <img src="./themes/custom/gftheme/images/icon-agro.png" alt="Energia" class="img-fluid" />
-          <h4>AGRONEGOCIOS</h4>
-          <p class="desktop-version">Diseñamos estrategias de inversión en base a los factores<br>y tendencias proyectadas a corto y largo
-            plazo.</p>
-            <p class="mobile-version">Analizamos las perspectivas de la agricultura y sus componentes.</p>
-        </div>
-        <div class="content row align-items-center justify-content-center desktop-version">
-          <div class="left">
-            <h6>FACTORES</h6>
-            <ul>
-              <li>Aumento de la población mundial.</li>
-              <li>Liberalización comercial y demanda de biocombustibles.</li>
-              <li>Incremento de los ingresos de los habitantes de países emergentes.</li>
-            </ul>
-          </div>
-          <div class="right">
-            <h6>Tendencias</h6>
-            <ul>
-              <li>Escenario de precios favorables para el sector.</li>
-              <li>Cambio en los patrones de alimentación de la población.</li>
-              <li>Conversión de productos primarios en bienes semi-procesados.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="content align-items-center justify-content-center mobile-version">
-          <div class="mobile-servicio-box">
-            <h6>FACTORES</h6>
-            <ul>
-              <li>Aumento de la población mundial.</li>
-              <li>Demanda de biocombustibles.</li>
-              <li>Incremento de los ingresos de los habitantes de países emergentes.</li>
-            </ul>
-          </div>
-          <div class="mobile-servicio-box">
-            <h6>Tendencias</h6>
-            <ul>
-              <li>Cambio en los patrones de alimentación de la población.</li>
-              <li>Conversión de productos primarios en bienes semi -procesados. </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <!-- Section -->
-      <!-- Section -->
-      <section class="section-wrapper section-servicios-3 servicios-section scroll-animation" id="medio">
-        <div class="header">
-          <img src="./themes/custom/gftheme/images/icon-medio.png" alt="Energia" class="img-fluid" />
-          <h4>MEDIO AMBIENTE</h4>
-          <p>Combinamos nuestra preocupación por el medio ambiente con nuestra capacidad emprendedora en el mundo de los negocios.</p>
-        </div>
-        <div class="content row align-items-center justify-content-center">
-          <div class="col">
-            <div class="content">
-              <div class="number">1</div>
-              <div class="text">Nos ocupamos de cuidar el medio ambiente.</div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="content">
-              <div class="number">2</div>
-              <div class="text">Participamos activamente en los mercados de carbono.</div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="content">
-              <div class="number">3</div>
-              <div class="text">Sincronizamos core business empresarial con el factor medioambiental.</div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="content">
-              <div class="number">4</div>
-              <div class="text">Adaptamos nuestras operaciones a los esquemas globales.</div>
-            </div>
-          </div>
+			<section class="section-wrapper section-servicios-1 servicios-section " id="energia">
+				<div class="header">
+					<img src="/themes/custom/gftheme/images/icon-energia.png" alt="Energia" class="img-fluid"/>
+					{% if language.getId() == 'en' %}
+						<h4>Energy</h4>
+						<p>We search for sustainable solutions to provide a more competitive energy.</p>
+					{% elseif language.getId() == 'es' %}
+						<h4>Energía</h4>
+						<p>Buscamos soluciones sostenibles para proporcionar energía más competitiva.</p>
+					{% endif %}
+				</div>
+				<div class="content row align-items-center justify-content-center">
+					<div class="circle-container justify-content-center">
+						{% if language.getId() == 'en' %}
+							<div class="circle">We analyze<br>TRENDS IN THE ENERGY SECTOR</div>
+						{% elseif language.getId() == 'es' %}
+							<div class="circle">Analizamos<br>TENDENCIAS
+								<br>DEL SECTOR
+								<br>ENERGÉTICO
+							</div>
+						{% endif %}
+					</div>
+					<div class="circle-container">
+						{% if language.getId() == 'en' %}
+							<div class="circle">Focused on<br>
+								SUSTAINABLE ENERGIES
+							</div>
+						{% elseif language.getId() == 'es' %}
+							<div class="circle">Focalizados en<br>
+								ENERGÍAS<br>
+								SUSTENTABLES</div>
+						{% endif %}
+					</div>
+					<div class="circle-container">
+						{% if language.getId() == 'en' %}
+							<div class="circle">We search for<br>
+								RENEWABLE ENERGIES</div>
+						{% elseif language.getId() == 'es' %}
+							<div class="circle">Buscamos<br>
+								ENERGÍAS<br>
+								RENOVABLES</div>
+						{% endif %}
+					</div>
+					<div class="circle-container">
+						{% if language.getId() == 'en' %}
+							<div class="circle">Bases on<br>
+								SAFE AND<br>RELIABLE<br>SOURCES</div>
+						{% elseif language.getId() == 'es' %}
+							<div class="circle">A partir de<br>
+								FUENTES<br>
+								SEGURAS Y<br>
+								CONFIABLES</div>
+						{% endif %}
+					</div>
+					<div class="circle-container">
+						{% if language.getId() == 'en' %}
+							<div class="circle">We propose<br>
+								INVESTMENT PROJECTS AND BUSINESS OPPORTUNITIES</div>
+						{% elseif language.getId() == 'es' %}
+							<div class="circle">Proponemos<br>
+								PROYECTOS DE<br>
+								INVERSIÓN Y<br>
+								OPORTUNIDADES<br>
+								DE NEGOCIO</div>
+						{% endif %}
+					</div>
+				</div>
+			</section>
+			<!-- Section -->
+			<section class="section-wrapper section-servicios-2 servicios-section scroll-animation" id="agro">
+				<div class="header">
+					<img src="/themes/custom/gftheme/images/icon-agro.png" alt="Energia" class="img-fluid"/>
+					<h4>
+						{% if language.getId() == 'en' %}
+							AGRIBUSINESS
+						{% elseif language.getId() == 'es' %}
+							AGRONEGOCIOS
+						{% endif %}
+					</h4>
+					<p class="desktop-version">
+						{% if language.getId() == 'en' %}
+							We design investment strategies based on both short and long-term projected trends and factors.
+						{% elseif language.getId() == 'es' %}
+							Diseñamos estrategias de inversión en base a los factores<br>y tendencias proyectadas a corto y largo plazo.
+						{% endif %}
+					</p>
+					<p class="mobile-version">
+						{% if language.getId() == 'en' %}
+							We analyze the perspectives of agriculture and its components.
+						{% elseif language.getId() == 'es' %}
+							Analizamos las perspectivas de la agricultura y sus componentes.
+						{% endif %}
+					</p>
+				</div>
+				<div class="content row align-items-center justify-content-center desktop-version">
+					<div class="left">
+						<h6>
+							{% if language.getId() == 'en' %}
+								FACTORS
+							{% elseif language.getId() == 'es' %}
+								FACTORES
+							{% endif %}
+						</h6>
+						<ul>
+							{% if language.getId() == 'en' %}
+								<li>Increase in world population.</li>
+								<li>Business liberalization and biofuels demand.</li>
+								<li>Increase in people’s income in emerging countries.</li>
+							{% elseif language.getId() == 'es' %}
+								<li>Aumento de la población mundial.</li>
+								<li>Liberalización comercial y demanda de biocombustibles.</li>
+								<li>Incremento de los ingresos de los habitantes de países emergentes.</li>
+							{% endif %}
+						</ul>
+					</div>
+					<div class="right">
+						<h6>
+							{% if language.getId() == 'en' %}
+								Trends
+							{% elseif language.getId() == 'es' %}
+								Tendencias
+							{% endif %}
+						</h6>
+						<ul>
+							{% if language.getId() == 'en' %}
+								<li>Scenario of favorable prices for the sector.</li>
+								<li>Change in people’s eating patterns.</li>
+								<li>Conversion of primary products into semi-processed assets.</li>
+							{% elseif language.getId() == 'es' %}
+								<li>Escenario de precios favorables para el sector.</li>
+								<li>Cambio en los patrones de alimentación de la población.</li>
+								<li>Conversión de productos primarios en bienes semi-procesados.</li>
+							{% endif %}
+						</ul>
+					</div>
+				</div>
+				<div class="content align-items-center justify-content-center mobile-version">
+					<div class="mobile-servicio-box">
+						<h6>
+							{% if language.getId() == 'en' %}
+								FACTORS
+							{% elseif language.getId() == 'es' %}
+								FACTORES
+							{% endif %}
+						</h6>
+						<ul>
+							{% if language.getId() == 'en' %}
+								<li>Increase in world population.</li>
+								<li>Business liberalization and biofuels demand.</li>
+								<li>Increase in people’s income in emerging countries.</li>
+							{% elseif language.getId() == 'es' %}
+								<li>Aumento de la población mundial.</li>
+								<li>Demanda de biocombustibles.</li>
+								<li>Incremento de los ingresos de los habitantes de países emergentes.</li>
+							{% endif %}
+						</ul>
+					</div>
+					<div class="mobile-servicio-box">
+						<h6>
+							{% if language.getId() == 'en' %}
+								Trends
+							{% elseif language.getId() == 'es' %}
+								Tendencias
+							{% endif %}
+						</h6>
+						<ul>
+							{% if language.getId() == 'en' %}
+								<li>Change in people’s eating patterns.</li>
+								<li>Conversion of primary products into semi-processed assets.</li>
+							{% elseif language.getId() == 'es' %}
+								<li>Cambio en los patrones de alimentación de la población.</li>
+								<li>Conversión de productos primarios en bienes semi-procesados.</li>
+							{% endif %}
+						</ul>
+					</div>
+				</div>
+			</section>
+			<!-- Section -->
+			<!-- Section -->
+			<section class="section-wrapper section-servicios-3 servicios-section scroll-animation" id="medio">
+				<div class="header">
+					<img src="/themes/custom/gftheme/images/icon-medio.png" alt="Energia" class="img-fluid"/>
+					<h4>
+						{% if language.getId() == 'en' %}
+							ENVIRONMENT
+						{% elseif language.getId() == 'es' %}
+							MEDIO AMBIENTE
+						{% endif %}
+					</h4>
+					<p>
+						{% if language.getId() == 'en' %}
+							We combine our concern for the environment with our entrepreneurial ability in the business
+																																																																																																																																																																	world.
+						{% elseif language.getId() == 'es' %}
+							Combinamos nuestra preocupación por el medio ambiente con nuestra capacidad emprendedora en el mundo de los negocios.
+						{% endif %}
+					</p>
+				</div>
+				<div class="content row align-items-center justify-content-center">
+					<div class="col">
+						<div class="content">
+							<div class="number">1</div>
+							<div class="text">
+								{% if language.getId() == 'en' %}
+									We take care of the environment.
+								{% elseif language.getId() == 'es' %}
+									Nos ocupamos de cuidar el medio ambiente.
+								{% endif %}
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="content">
+							<div class="number">2</div>
+							<div class="text">
+								{% if language.getId() == 'en' %}
+									We have an active participation in carbon markets.
+								{% elseif language.getId() == 'es' %}
+									Participamos activamente en los mercados de carbono.
+								{% endif %}
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="content">
+							<div class="number">3</div>
+							<div class="text">
+								{% if language.getId() == 'en' %}
+									We synchronize corporate core business with the environmental factor.
+								{% elseif language.getId() == 'es' %}
+									Sincronizamos core business empresarial con el factor medioambiental.
+								{% endif %}
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="content">
+							<div class="number">4</div>
+							<div class="text">
+								{% if language.getId() == 'en' %}
+									We adapt our operation to global structures.
+								{% elseif language.getId() == 'es' %}
+									Adaptamos nuestras operaciones a los esquemas globales.
+								{% endif %}
+							</div>
+						</div>
+					</div>
 
-        </div>
-      </section>
-      <!-- Section -->
-      <!-- Section -->
-      <section class="section-wrapper section-servicios-4 servicios-section scroll-animation" id="bio">
-        <div class="header">
-          <img src="./themes/custom/gftheme/images/icon-bio.png" alt="Energia" class="img-fluid" />
-          <h4>BIOTECNOLOGÍA</h4>
-          <p><span class="font-bold">Laboratorio 2020:</span><br>El espacio de seguimiento de proyectos de inversión y
-            cambios de estructuras biotecnológicas.</p>
-        </div>
-        <div class="content row align-items-center justify-content-center">
-          <div class="col">
-            <div class="circle">DESARROLLO<br>DE AGRICULTURA<br>Y FORESTACIÓN</div>
-          </div>
-          <div class="col">
-            <div class="circle">GENERACIÓN<br>DE ENERGÍA<br>RENOVABLE</div>
-          </div>
-          <div class="col">
-            <div class="circle">CUIDADO<br>DE LA SALUD</div>
-          </div>
-        </div>
-      </section>
-      <!-- Section -->
-      <section class="section-wrapper section-servicios-5 servicios-section scroll-animation" id="tics">
-        <div class="header">
-          <img src="./themes/custom/gftheme/images/icon-tics.png" alt="Energia" class="img-fluid" />
-          <h4>TICS</h4>
-          <p>Nuestra adaptación a las Tecnologías de Información y Comunicación (TICS)<br> nos
-              permite asumir nuevos desafíos y seguir las nuevas tendencias en:</p>
-        </div>
-        <div class="content row align-items-center justify-content-center">
-          <div class="col">
-            <img src="./themes/custom/gftheme/images/icon-tarjetas.png" alt="Energia" class="img-fluid" />
-            <div class="text">TARJETAS<br>
-              DE CRÉDITO</div>
-          </div>
-          <div class="col">
-            <img src="./themes/custom/gftheme/images/icon-telefonia.png" alt="Energia" class="img-fluid" />
-            <div class="text" style="transform: translate(0px, -10px)">TELEFONÍA</div>
-          </div>
-          <div class="col">
-            <img src="./themes/custom/gftheme/images/icon-pagos.png" alt="Energia" class="img-fluid" />
-            <div class="text">PAGOS BANCARIOS<br>
-              Y TRANSFERENCIAS </div>
-          </div>
-        </div>
-      </section>
-    </main>
-  </div>
+				</div>
+			</section>
+			<!-- Section -->
+			<!-- Section -->
+			<section class="section-wrapper section-servicios-4 servicios-section scroll-animation" id="bio">
+				<div class="header">
+					<img src="/themes/custom/gftheme/images/icon-bio.png" alt="Energia" class="img-fluid"/>
+					<h4>
+						{% if language.getId() == 'en' %}
+							BIOTECHNOLOGY
+						{% elseif language.getId() == 'es' %}
+							BIOTECNOLOGÍA
+						{% endif %}
+					</h4>
+					<p>
+
+						{% if language.getId() == 'en' %}
+							<span class="font-bold">Lab 2020:</span><br>The area that monitors investment projects and changes in biotechnical structures.
+						{% elseif language.getId() == 'es' %}
+							<span class="font-bold">Laboratorio 2020:</span><br>El espacio de seguimiento de proyectos de inversión y cambios de estructuras biotecnológicas.
+						{% endif %}
+					</p>
+				</div>
+				<div class="content row align-items-center justify-content-center">
+					<div class="col">
+						<div class="circle">
+							{% if language.getId() == 'en' %}
+								DEVELOPMENT<br>OF AGRICULTURE<br>AND AFFORESTATION
+							{% elseif language.getId() == 'es' %}
+								DESARROLLO<br>DE AGRICULTURA<br>Y FORESTACIÓN
+							{% endif %}
+						</div>
+					</div>
+					<div class="col">
+						<div class="circle">
+							{% if language.getId() == 'en' %}
+								GENERATION<br>OF RENEWABLE<br>ENERGY
+							{% elseif language.getId() == 'es' %}
+								GENERACIÓN<br>DE ENERGÍA<br>RENOVABLE
+							{% endif %}
+						</div>
+					</div>
+					<div class="col">
+						<div class="circle">
+							{% if language.getId() == 'en' %}
+								HEALTHCARE
+							{% elseif language.getId() == 'es' %}
+								CUIDADO<br>DE LA SALUD
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Section -->
+			<section class="section-wrapper section-servicios-5 servicios-section scroll-animation" id="tics">
+				<div class="header">
+					<img src="/themes/custom/gftheme/images/icon-tics.png" alt="Energia" class="img-fluid"/>
+					<h4>
+						{% if language.getId() == 'en' %}
+							TICS
+						{% elseif language.getId() == 'es' %}
+							TICS
+						{% endif %}
+					</h4>
+					<p class="desktop-version">
+						{% if language.getId() == 'en' %}
+							Our adaptation Technologies of Information and Communication (TICS)
+							<br>allows us to addressnew challenges and follow the new trends in:
+						{% elseif language.getId() == 'es' %}
+							Nuestra adaptación a las Tecnologías de Información y Comunicación (TICS)<br>nos permite asumir nuevos desafíos y seguir las nuevas tendencias en:
+						{% endif %}
+					</p>
+					<p class="mobile-version">
+						{% if language.getId() == 'en' %}
+							Our adaptation Technologies of Information and Communication (TICS)
+																																																																													allows us to addressnew challenges and follow the new trends in:
+						{% elseif language.getId() == 'es' %}
+							Nuestra adaptación a las Tecnologías de Información y Comunicación (TICS) nos permite asumir nuevos desafíos y seguir las nuevas tendencias en:
+						{% endif %}
+					</p>
+				</div>
+				<div class="content row align-items-center justify-content-center">
+					<div class="col">
+						<img src="/themes/custom/gftheme/images/icon-tarjetas.png" alt="Energia" class="img-fluid"/>
+						<div class="text">
+							{% if language.getId() == 'en' %}
+								CREDIT CARDS
+							{% elseif language.getId() == 'es' %}
+								TARJETAS<br>
+								DE CRÉDITO
+							{% endif %}
+						</div>
+					</div>
+					<div class="col">
+						<img src="/themes/custom/gftheme/images/icon-telefonia.png" alt="Energia" class="img-fluid"/>
+						<div class="text" style="transform: translate(0px, -10px)">
+							{% if language.getId() == 'en' %}
+								TELEPHONY
+							{% elseif language.getId() == 'es' %}
+								TELEFONÍA
+							{% endif %}
+						</div>
+					</div>
+					<div class="col">
+						<img src="/themes/custom/gftheme/images/icon-pagos.png" alt="Energia" class="img-fluid"/>
+						<div class="text">
+							{% if language.getId() == 'en' %}
+								BANK PAYMENTS AND TRANSFERS
+							{% elseif language.getId() == 'es' %}
+								PAGOS BANCARIOS<br>
+								Y TRANSFERENCIAS
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
 </div>
 
 {% include directory ~ '/partials/footer.html.twig' %}

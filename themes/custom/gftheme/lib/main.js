@@ -29,13 +29,13 @@ jQuery(document).ready(function($) {
     var scroll = $(window).scrollTop();
 
     if (scroll >= 100) {
-      $('.main-header, .main-navigation, .social-networks, .line').addClass(
-        'front'
-      );
+      $(
+        '.main-header, .main-navigation, .social-networks, .line, .languajes-selector'
+      ).addClass('front');
     } else {
-      $('.main-header, .main-navigation, .social-networks').removeClass(
-        'front'
-      );
+      $(
+        '.main-header, .main-navigation, .social-networks, .languajes-selector'
+      ).removeClass('front');
     }
 
     /* Check the location of each desired element */
@@ -121,12 +121,39 @@ jQuery(document).ready(function($) {
     $('#search-field').toggle('dimmed sbox');
   });
 
-  console.log('hola');
   $('.eventos-container .content').height(
     $('.eventos-container .carousel-item').height() -
       $('.old-events').height() -
       100
   );
+
+  // Language Events
+
+  $('#english-lang').on('click', function(e) {
+    e.preventDefault();
+    var urlOrigin = window.location.origin;
+    var urlHref = window.location.href;
+    if (urlHref.indexOf('/en') < 0) {
+      urlHref = urlHref.replace(urlOrigin + '/', urlOrigin + '/en/');
+      $(location).attr('href', urlHref);
+    }
+  });
+
+  $('#spanish-lang').on('click', function(e) {
+    e.preventDefault();
+    var urlOrigin = window.location.origin;
+    var urlHref = window.location.href;
+    if (urlHref.indexOf('/en') > 0) {
+      urlHref = urlHref.replace(urlOrigin + '/en', urlOrigin + '/');
+      $(location).attr('href', urlHref);
+    }
+  });
+
+  var urlHref = window.location.href;
+  if (urlHref.indexOf('/en') > 0) {
+    $('#edit-nombre').attr('placeholder', 'Name');
+    $('#edit-mensaje').attr('placeholder', 'Message');
+  }
 
   //end JS
 });
